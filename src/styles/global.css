@@ -1,1 +1,24 @@
+@keyframes bannerZoom {
+  0% {
+    background-size: 120%;
+  }
+
+  100% {
+    background-size: 140%;
+  }
+}
+
+.animate-banner-zoom {
+  animation: bannerZoom 20s alternate infinite;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.banner-intecsa {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)),
+    url("/assets/hero_ita_min.jpg");
+  object-fit: cover;
+}
+
+
 @import "tailwindcss";
