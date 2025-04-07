@@ -1,22 +1,56 @@
+---
+import "../styles/global.css";
+---
+
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <meta
+      name="description"
+      content="Empresa mexicana con más de 27 años de experiencia en integraciones ABB, instalaciones eléctricas industriales y comerciales. Obras realizadas para Liverpool, Palacio de Hierro, Grupo Inditex y CFE en México."
+    />
+    <title>Grupo Intecsa</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full bg-white shadow-lg z-50">
+      <div class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+        <a href="/" class="flex items-center">
+          <img src="https://blog-omega-mauve.vercel.app/_next/image?url=%2Flogo%2Fweb-logo.webp&w=96&q=75" alt="Logo Grupo Intecsa" class="h-10 sm:h-12">
+          <span class="ml-2 sm:ml-4 text-lg sm:text-xl font-bold text-gray-800">Grupo Intecsa</span>
+        </a>
+        <div class="hidden md:flex space-x-4 sm:space-x-6">
+          <a href="https://forms.monday.com/forms/embed/608067760034e1ac1f86e10392668e8b?r=use1" target="_blak" class="text-gray-700 hover:text-blue-500 text-sm sm:text-base flex items-center">
+            <h3 class="text-xl font-bold">Contacto</h3>
+            <img src="icons/contacto.svg" alt="Contacto" class="h-6 w-6 ml-2" />
+          </a>
+        </div>
+        <div class="md:hidden">
+          <button class="text-gray-800 focus:outline-none" id="menu-button">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <div class="mt-16">
+      <slot/>
+    </div>
+
+  </body>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
 </style>

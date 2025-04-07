@@ -1,0 +1,115 @@
+---
+// src/components/IntecsaHero.astro
+---
+
+<div class="bg-gradient-to-br from-white to-gray-50 text-gray-800 py-16 px-4 sm:px-6 lg:px-8 border-b border-gray-200">
+  <div class="max-w-7xl mx-auto">
+    <!-- Encabezado con logo -->
+    <div class="flex flex-col md:flex-row justify-between items-center mb-12 gap-8">
+      <div>
+        <h1 class="text-4xl md:text-5xl font-bold mb-2">GRUPO <span class="text-gray-600">INTECSA</span></h1>
+        <p class="text-xl text-gray-500">INSTALACIONES Y TÉCNICA S.A. DE C.V.</p>
+      </div>
+      <div class="bg-gray-100 p-4 rounded-xl border border-gray-200 shadow-sm">
+        <h2 class="text-2xl font-semibold text-gray-700 mb-2">Reconocimientos</h2>
+        <ul class="space-y-1 text-gray-600">
+          <li class="flex items-center gap-2">🏆 Proveedor Certificado por Liverpool (2023)</li>
+          <li class="flex items-center gap-2">🏅 Medalla de Oro a la Calidad (2005)</li>
+          <li class="flex items-center gap-2">⭐ Premio Empresa Mexicana del Año (2012)</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Grid de contenido -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Quiénes Somos -->
+      <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:border-gray-300 transition-all">
+        <h2 class="text-2xl font-bold mb-4 text-gray-700">¿Quiénes Somos?</h2>
+        <p class="text-gray-600">INTECSA es una empresa dedicada a la instalación, planeación, construcción y mantenimiento de centros comerciales, tiendas departamentales, naves industriales y edificios inteligentes.</p>
+      </div>
+
+      <!-- Misión y Visión -->
+      <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:border-gray-300 transition-all">
+        <div class="mb-6">
+          <h3 class="text-xl font-semibold mb-2 text-gray-700">Misión</h3>
+          <p class="text-gray-600">Alcanzar la certificación en la fabricación y elaboración de todos nuestros productos y servicios.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold mb-2 text-gray-700">Visión</h3>
+          <p class="text-gray-600">Consolidarnos como una empresa globalizada con una amplia participación en el mercado internacional.</p>
+        </div>
+      </div>
+
+      <!-- Valores -->
+      <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:border-gray-300 transition-all">
+        <h2 class="text-2xl font-bold mb-4 text-gray-700">Nuestros Valores</h2>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-3">
+            <span class="bg-gray-100 p-1 rounded-full">🔍</span>
+            <span><strong class="text-gray-700">Verdad:</strong> Base de operación y toma de decisiones.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="bg-gray-100 p-1 rounded-full">🔄</span>
+            <span><strong class="text-gray-700">Versatilidad:</strong> Adaptación al cambio constante.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="bg-gray-100 p-1 rounded-full">🤝</span>
+            <span><strong class="text-gray-700">Respeto:</strong> Colaboración con las partes interesadas.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="bg-gray-100 p-1 rounded-full">👥</span>
+            <span><strong class="text-gray-700">Unidad:</strong> Trabajo en equipo con un mismo objetivo.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="bg-gray-100 p-1 rounded-full">🛠️</span>
+            <span><strong class="text-gray-700">Servicio:</strong> Respaldo continuo a nuestros clientes.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Obras Recientes -->
+      <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:border-gray-300 transition-all md:col-span-2 lg:col-span-1">
+        <h2 class="text-2xl font-bold mb-4 text-gray-700">Obras Recientes</h2>
+        <a href="/assets/CV_INTECSA_DIC_2024.pdf" target="_blank" dowload class="bg-slate-300 px-4 py-2 rounded-lg mb-4 hover:bg-slate-400 transition-all w-full flex items-center justify-center">
+          <img src="/icons/download.svg" alt="Ver más" class="h-5 mr-2">
+           resumen de obras
+        </a>        
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="bg-gray-50 p-3 rounded-lg border border-gray-100">
+            <p class="font-medium text-gray-700">BERSHKA PERISUR CDMX</p>
+            <p class="text-sm text-gray-500">2024</p>
+          </div>
+          <div class="bg-gray-50 p-3 rounded-lg border border-gray-100">
+            <p class="font-medium text-gray-700">LIVERPOOL GOURMET POLANCO</p>
+            <p class="text-sm text-gray-500">2024</p>
+          </div>
+          <div class="bg-gray-50 p-3 rounded-lg border border-gray-100">
+            <p class="font-medium text-gray-700">STRADIVARIUS MONTERREY</p>
+            <p class="text-sm text-gray-500">2024</p>
+          </div>
+          <div class="bg-gray-50 p-3 rounded-lg border border-gray-100">
+            <p class="font-medium text-gray-700">CINEMEX INSURGENTES</p>
+            <p class="text-sm text-gray-500">2024</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carta del Director -->
+      <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:border-gray-300 transition-all md:col-span-2">
+        <h2 class="text-2xl font-bold mb-4 text-gray-700">Carta del Director</h2>
+        <blockquote class="text-gray-600 italic border-l-4 border-gray-300 pl-4 py-2">
+          "Grupo INTECSA busca adoptar la norma ISO 9001-2015 para garantizar eficiencia, eficacia y mejora continua en todos los procesos, con un enfoque basado en riesgos y oportunidades."
+        </blockquote>
+        <div class="mt-4 flex items-center gap-3">
+          <div class="h-12 w-12 bg-gray-100 rounded-full flex items-center justify-center">
+            <span class="text-xl text-gray-500">👔</span>
+          </div>
+          <div>
+            <p class="font-medium text-gray-700">Director General</p>
+            <p class="text-sm text-gray-500">Grupo INTECSA</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

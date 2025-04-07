@@ -1,0 +1,99 @@
+---
+// src/pages/about.astro
+import Layout from '../layouts/Layout.astro';
+import IntecsaHero from '../components/IntecsaHero.astro';
+// Importa otros componentes que necesites
+---
+
+<Layout title="Sobre Nosotros | Grupo INTECSA">
+  <!-- Componente Hero -->
+  <IntecsaHero />
+
+  <!-- Sección Nuestra Historia -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Nuestra Historia</h2>
+
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <p class="text-lg mb-4 text-gray-600">
+            Con más de 27 años en el mercado, Grupo INTECSA ha crecido para convertirse en un referente en el sector de instalaciones técnicas y construcción.
+          </p>
+          <p class="text-lg text-gray-600">
+            Nuestro compromiso con la calidad y la innovación nos ha permitido participar en proyectos emblemáticos a nivel nacional.
+          </p>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+          <img 
+            src="https://scontent.fmex11-4.fna.fbcdn.net/v/t1.6435-9/49897863_228557154712835_7793781014056140800_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=CIrZy_ZLZ2EQ7kNvwF3uaWs&_nc_oc=Adk9p8LdPobEeWfV0PJrSA8iK7ZSNxlYZG1ReB0gLdHJfFfdYiwggnJehMGAEi8gn4I&_nc_zt=23&_nc_ht=scontent.fmex11-4.fna&_nc_gid=22x_NtSddhzEVG683MwUvg&oh=00_AfETZNKa9UJ_G0rIamX3Di4xXhrGx_ZjhtcxR5Dw5SU-ng&oe=681AEC36" 
+            alt="Equipo INTECSA" 
+            class="rounded-lg shadow-sm w-full h-auto object-cover"
+            width="600"
+            height="400"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Nuestro Equipo -->
+  <section class="py-16 bg-gray-50 border-t border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Nuestro Equipo</h2>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Tarjeta de equipo 1 -->
+        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+          <div class="bg-gray-100 rounded-lg h-48 mb-4 overflow-hidden">
+            <img 
+              src="/images/team-member1.jpg" 
+              alt="Miembro del equipo" 
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <h3 class="text-xl font-semibold text-gray-700">Nombre Apellido</h3>
+          <p class="text-gray-500 mb-2">Cargo/Puesto</p>
+          <p class="text-gray-600 text-sm">Breve descripción o especialización.</p>
+        </div>
+
+        <!-- Tarjeta de equipo 2 -->
+        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+          <div class="bg-gray-100 rounded-lg h-48 mb-4 overflow-hidden">
+            <img 
+              src="/images/team-member2.jpg" 
+              alt="Miembro del equipo" 
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <h3 class="text-xl font-semibold text-gray-700">Nombre Apellido</h3>
+          <p class="text-gray-500 mb-2">Cargo/Puesto</p>
+          <p class="text-gray-600 text-sm">Breve descripción o especialización.</p>
+        </div>
+
+        <!-- Tarjeta de equipo 3 -->
+        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+          <div class="bg-gray-100 rounded-lg h-48 mb-4 overflow-hidden">
+            <img 
+              src="/images/team-member3.jpg" 
+              alt="Miembro del equipo" 
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <h3 class="text-xl font-semibold text-gray-700">Nombre Apellido</h3>
+          <p class="text-gray-500 mb-2">Cargo/Puesto</p>
+          <p class="text-gray-600 text-sm">Breve descripción o especialización.</p>
+        </div>
+      </div>
+
+      <!-- Botón opcional -->
+      <div class="text-center mt-12">
+        <a href="/equipo" class="inline-block px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors">
+          Conoce a todo nuestro equipo
+        </a>
+      </div>
+    </div>
+  </section></Layout>
