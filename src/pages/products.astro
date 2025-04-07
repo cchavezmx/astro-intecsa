@@ -1,0 +1,125 @@
+---
+// src/components/CatalogosSection.astro
+// Importaciones necesarias (si usas componentes de Astro)
+import { Image } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+// import catalogoGeneral from '../assets/images/catalogo-general.jpg';
+// import solucionesIndustriales from '../assets/images/soluciones-industriales.jpg';
+// import certificaciones from '../assets/images/certificaciones.jpg';
+---
+
+<Layout title="Nuestros Productos | Grupo INTECSA">
+<section class="py-20 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Encabezado -->
+    <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Nuestros Catálogos <span class="text-gray-600">
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Descarga nuestros documentos oficiales o explora nuestras certificaciones de calidad.
+      </p>
+    </div>
+
+    <!-- Grid de catálogos -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+      <!-- Catálogo 1 -->
+      <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group border border-gray-100">
+        <div class="h-48 bg-gradient-to-r from-gray-100 to-gray-200 flex items-center justify-center">
+          <!-- <Image  -->
+          <!--   src={catalogoGeneral}  -->
+          <!--   alt="Catálogo General 2024" -->
+          <!--   class="w-full h-full object-cover" -->
+          <!--   width={400} -->
+          <!--   height={300} -->
+          <!--   loading="lazy" -->
+          <!-- /> -->
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Catálogo General 2024</h3>
+          <p class="text-gray-600 mb-4">Todos nuestros productos y servicios en un solo documento.</p>
+          <div class="flex flex-wrap gap-3">
+            <a href="/catalogos/general.pdf" class="px-4 py-2 bg-gray-900 text-white rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+              Descargar PDF
+            </a>
+            <a href="/catalogos/general" class="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors">
+              Ver en línea
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Repite el mismo patrón para los otros catálogos -->
+      <!-- Catálogo 2 -->
+      <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group border border-gray-100">
+        <div class="h-48 bg-gradient-to-r from-gray-100 to-gray-200 flex items-center justify-center">
+          <!-- <Image  -->
+          <!--   src={solucionesIndustriales}  -->
+          <!--   alt="Soluciones Industriales" -->
+          <!--   class="w-full h-full object-cover" -->
+          <!--   width={400} -->
+          <!--   height={300} -->
+          <!--   loading="lazy" -->
+          <!-- /> -->
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Soluciones Industriales</h3>
+          <p class="text-gray-600 mb-4">Especializado en naves industriales y almacenes.</p>
+          <div class="flex flex-wrap gap-3">
+            <a href="/catalogos/industriales.pdf" class="px-4 py-2 bg-gray-900 text-white rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+              Descargar PDF
+            </a>
+            <a href="/catalogos/industriales" class="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors">
+              Ver en línea
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certificaciones -->
+      <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group border border-gray-100">
+        <div class="h-48 bg-gradient-to-r from-gray-100 to-gray-200 flex items-center justify-center">
+          <!-- <Image  -->
+          <!--   src={certificaciones}  -->
+          <!--   alt="Certificaciones de Calidad" -->
+          <!--   class="w-full h-full object-cover" -->
+          <!--   width={400} -->
+          <!--   height={300} -->
+          <!--   loading="lazy" -->
+          <!-- /> -->
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Certificaciones de Calidad</h3>
+          <p class="text-gray-600 mb-4">Documentación oficial de nuestros estándares.</p>
+          <div class="flex flex-wrap gap-3">
+            <a href="/certificaciones" class="px-4 py-2 bg-gray-900 text-white rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+              Ver certificados
+            </a>
+            <a href="/certificaciones/iso9001" class="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors">
+              ISO 9001
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Llamado a la acción -->
+    <div class="text-center">
+      <p class="text-gray-600 mb-6">¿Necesitas un catálogo personalizado o información específica?</p>
+      <a href="/contacto" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gray-800 hover:bg-gray-700 transition-colors">
+        Contáctanos
+        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 -mr-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+      </a>
+    </div>
+  </div>
+  </section>
+</Layout>
