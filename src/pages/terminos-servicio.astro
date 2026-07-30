@@ -1,35 +1,60 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Container from "../components/Container.astro";
+import AnimatedSection from "../components/AnimatedSection.astro";
 ---
 
-<Layout>
-  <main class="max-w-3xl mx-auto px-4 py-16">
-    <h1 class="text-3xl font-bold text-gray-900 mb-6">Términos de Servicio</h1>
-    <div class="prose prose-lg text-gray-700">
-      <p>
-        Al acceder y utilizar este sitio web de Grupo Intecsa, S.A. de C.V., aceptas los siguientes términos y condiciones.
-      </p>
-      <h2 class="text-xl font-semibold mt-8 mb-3">1. Uso del sitio</h2>
-      <p>
-        El contenido de este sitio es informativo y promocional. No debe interpretarse como una oferta vinculante hasta que exista una cotización o contrato firmado por ambas partes.
-      </p>
-      <h2 class="text-xl font-semibold mt-8 mb-3">2. Propiedad intelectual</h2>
-      <p>
-        Todos los textos, imágenes, logotipos, marcas y materiales de este sitio son propiedad de Grupo Intecsa o de sus licenciantes. Queda prohibida su reproducción, distribución o modificación sin autorización expresa.
-      </p>
-      <h2 class="text-xl font-semibold mt-8 mb-3">3. Limitación de responsabilidad</h2>
-      <p>
-        Grupo Intecsa no garantiza que el sitio esté libre de interrupciones o errores. No nos hacemos responsables por daños derivados del uso o imposibilidad de uso del sitio, en la medida permitida por la ley.
-      </p>
-      <h2 class="text-xl font-semibold mt-8 mb-3">4. Enlaces externos</h2>
-      <p>
-        El sitio puede contener enlaces a sitios de terceros. Grupo Intecsa no controla ni responde por el contenido o prácticas de privacidad de esos sitios.
-      </p>
-      <h2 class="text-xl font-semibold mt-8 mb-3">5. Modificaciones</h2>
-      <p>
-        Podemos actualizar estos términos en cualquier momento. El uso continuo del sitio implica la aceptación de los términos vigentes.
-      </p>
-      <p class="mt-8 text-sm text-gray-500">Última actualización: julio 2026.</p>
-    </div>
-  </main>
+<Layout title="Términos de Servicio | Instalaciones y Técnica">
+  <div class="bg-slate-950 min-h-screen pb-20">
+    <section class="relative py-16 md:py-24 overflow-hidden">
+      <div class="absolute inset-0 gradient-radial"></div>
+      <Container class="relative z-10">
+        <AnimatedSection class="text-center max-w-3xl mx-auto">
+          <p class="text-electric font-semibold text-sm uppercase tracking-widest mb-4">Legal</p>
+          <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-6">
+            Términos de Servicio
+          </h1>
+        </AnimatedSection>
+      </Container>
+    </section>
+
+    <Container>
+      <AnimatedSection>
+        <div class="glass-card rounded-2xl p-6 md:p-10 max-w-4xl mx-auto">
+          <div class="space-y-8 text-slate-300 leading-relaxed">
+            <p>
+              Al acceder y utilizar este sitio web de <strong class="text-white">Instalaciones y Técnica, S.A. de C.V.</strong>, aceptas los siguientes términos y condiciones.
+            </p>
+
+            <div>
+              <h2 class="text-xl font-bold text-white mb-3">1. Uso del sitio</h2>
+              <p>El contenido de este sitio es informativo y promocional. No debe interpretarse como una oferta vinculante hasta que exista una cotización o contrato firmado por ambas partes.</p>
+            </div>
+
+            <div>
+              <h2 class="text-xl font-bold text-white mb-3">2. Propiedad intelectual</h2>
+              <p>Todos los textos, imágenes, logotipos, marcas y materiales de este sitio son propiedad de Instalaciones y Técnica o de sus licenciantes. Queda prohibida su reproducción, distribución o modificación sin autorización expresa.</p>
+            </div>
+
+            <div>
+              <h2 class="text-xl font-bold text-white mb-3">3. Limitación de responsabilidad</h2>
+              <p>Instalaciones y Técnica no garantiza que el sitio esté libre de interrupciones o errores. No nos hacemos responsables por daños derivados del uso o imposibilidad de uso del sitio, en la medida permitida por la ley.</p>
+            </div>
+
+            <div>
+              <h2 class="text-xl font-bold text-white mb-3">4. Enlaces externos</h2>
+              <p>El sitio puede contener enlaces a sitios de terceros. Instalaciones y Técnica no controla ni responde por el contenido o prácticas de privacidad de esos sitios.</p>
+            </div>
+
+            <div>
+              <h2 class="text-xl font-bold text-white mb-3">5. Modificaciones</h2>
+              <p>Podemos actualizar estos términos en cualquier momento. El uso continuo del sitio implica la aceptación de los términos vigentes.</p>
+            </div>
+
+            <p class="text-sm text-slate-500 pt-4 border-t border-white/10">Última actualización: julio 2026.</p>
+          </div>
+        </div>
+      </AnimatedSection>
+    </Container>
+  </div>
 </Layout>

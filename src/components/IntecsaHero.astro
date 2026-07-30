@@ -1,120 +1,239 @@
 ---
-// src/components/IntecsaHero.astro
+import AnimatedSection from '../components/AnimatedSection.astro';
+import Container from '../components/Container.astro';
+
+const recognitions = [
+  { year: '2025', title: 'Proveedor Certificado', desc: 'Por El Palacio de Hierro y Liverpool' },
+  { year: '2012', title: 'Empresa México del Año', desc: 'Latin American Quality Institute' },
+  { year: '2005', title: 'Medalla de Oro', desc: 'A la Calidad y Servicio' },
+];
+
+const values = [
+  { icon: '🔍', title: 'Verdad', desc: 'Base de nuestra operación y toma de decisiones.' },
+  { icon: '🔄', title: 'Versatilidad', desc: 'Adaptación al cambio constante del sector.' },
+  { icon: '🤝', title: 'Respeto', desc: 'Colaboración con todas las partes interesadas.' },
+  { icon: '👥', title: 'Unidad', desc: 'Trabajo en equipo con un mismo objetivo.' },
+  { icon: '🛠️', title: 'Servicio', desc: 'Respaldo continuo a nuestros clientes.' },
+];
+
+const recentWorks2025 = [
+  'El Palacio de Hierro Monterrey — Alimentadores generales',
+  'Moda Joven Sfera México — Saltillo, Cd. Juárez y Colima',
+  'Distribuidora Liverpool — Control de acceso Galerías Coapa',
+  'Comedor de empleados Liverpool Querétaro',
+  'Operadora de Cinemas — Contactos Cinemex Delta CDMX',
+];
+
+const recentWorks2024 = [
+  'Liverpool Gourmet Polanco CDMX',
+  'ITX Retail México — Pull & Bear y Bershka Parque Delta',
+  'ITX Retail México — Pull & Bear Oasis Coyoacán',
+  'ITX Retail México — Stradivarius Satélite y Galerías Monterrey',
+  'Cinemex Insurgentes / Cinemex Samara Satélite',
+];
 ---
 
-<div class="bg-gradient-to-br from-white to-gray-50 text-gray-800 py-16 px-4 sm:px-6 lg:px-8 border-b border-gray-200">
-  <div class="max-w-7xl mx-auto">
-    <!-- Encabezado con logo -->
-    <div class="flex flex-col md:flex-row justify-between items-center mb-12 gap-8">
-      <div>
-        <h1 class="text-4xl md:text-5xl font-bold mb-2">Bienvenido a <span class="text-gray-600">Instalaciones y Técnica</span></h1>
-        <p class="text-xl text-gray-500">INSTALACIONES Y TÉCNICA S.A. DE C.V.</p>
-      </div>
-      <div class="bg-gray-100 p-4 rounded-xl border border-gray-200 shadow-sm">
-        <h2 class="text-2xl font-semibold text-gray-700 mb-2">Reconocimientos</h2>
-        <ul class="space-y-1 text-gray-600">
-          <li class="flex items-center gap-2">🏆 Proveedor Certificado por Liverpool (2023)</li>
-          <li class="flex items-center gap-2">🏅 Medalla de Oro a la Calidad (2005)</li>
-          <li class="flex items-center gap-2">⭐ Premio Empresa Mexicana del Año (2012)</li>
-        </ul>
-      </div>
-    </div>
+<div class="bg-slate-950 min-h-screen">
+  <!-- Hero interno -->
+  <section class="relative py-24 md:py-32 overflow-hidden">
+    <div class="absolute inset-0 gradient-radial"></div>
+    <Container class="relative z-10">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <AnimatedSection>
+          <p class="text-electric font-semibold text-sm uppercase tracking-widest mb-4">Sobre nosotros</p>
+          <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white mb-6">
+            Bienvenido a <span class="text-transparent bg-clip-text bg-gradient-to-r from-electric to-cyan-300">Instalaciones y Técnica</span>
+          </h1>
+          <p class="text-lg md:text-xl text-slate-300 leading-relaxed mb-8">
+            Empresa mexicana con más de 27 años de experiencia en la instalación, planeación, construcción y mantenimiento de centros comerciales, tiendas departamentales, naves industriales y edificios inteligentes.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="/CV_INTECSA.pdf" target="_blank" download class="btn-primary">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+              Descargar CV de obras
+            </a>
+            <a href="/" class="btn-secondary">
+              Volver al inicio
+            </a>
+          </div>
+        </AnimatedSection>
 
-    <!-- Grid de contenido -->
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <!-- Quiénes Somos -->
-      <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:border-gray-300 transition-all">
-        <h2 class="text-2xl font-bold mb-4 text-gray-700">¿Quiénes Somos?</h2>
-        <p class="text-gray-600">INTECSA es una empresa dedicada a la instalación, planeación, construcción y mantenimiento de centros comerciales, tiendas departamentales, naves industriales y edificios inteligentes.</p>
+        <AnimatedSection delay={200}>
+          <div class="glass-card rounded-3xl p-8">
+            <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-2">
+              <span class="text-amber">🏆</span> Reconocimientos
+            </h2>
+            <div class="space-y-5">
+              {recognitions.map((rec) => (
+                <div class="flex gap-4 items-start">
+                  <div class="flex-shrink-0 w-16 h-16 rounded-2xl bg-gradient-to-br from-amber/20 to-amber/5 flex items-center justify-center">
+                    <span class="text-lg font-bold text-amber font-mono">{rec.year}</span>
+                  </div>
+                  <div>
+                    <h3 class="text-white font-semibold">{rec.title}</h3>
+                    <p class="text-slate-400 text-sm">{rec.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </AnimatedSection>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Quiénes somos / Misión / Visión -->
+  <section class="py-20 relative">
+    <div class="absolute inset-0 bg-gradient-to-b from-slate-900/50 to-slate-950"></div>
+    <Container class="relative z-10">
+      <div class="grid md:grid-cols-3 gap-6">
+        <AnimatedSection>
+          <div class="glass-card rounded-2xl p-8 h-full border-glow">
+            <div class="w-12 h-12 rounded-xl bg-electric/10 flex items-center justify-center mb-5">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-electric" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+              </svg>
+            </div>
+            <h2 class="text-2xl font-bold text-white mb-4">¿Quiénes somos?</h2>
+            <p class="text-slate-400 leading-relaxed">
+              INTECSA es una empresa dedicada a la instalación, planeación, construcción y mantenimiento de centros comerciales, tiendas departamentales, naves industriales y edificios inteligentes. Contamos con el equipo humano y tecnológico para ofrecer atención directa, respuesta inmediata y conocimiento integral de cada proyecto.
+            </p>
+          </div>
+        </AnimatedSection>
+
+        <AnimatedSection delay={100}>
+          <div class="glass-card rounded-2xl p-8 h-full border-glow">
+            <div class="w-12 h-12 rounded-xl bg-electric/10 flex items-center justify-center mb-5">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-electric" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <h2 class="text-2xl font-bold text-white mb-4">Misión</h2>
+            <p class="text-slate-400 leading-relaxed">
+              Alcanzar la certificación en la fabricación y elaboración de todos nuestros productos y servicios, cumpliendo con los estándares de calidad ANCE y normas internacionales.
+            </p>
+          </div>
+        </AnimatedSection>
+
+        <AnimatedSection delay={200}>
+          <div class="glass-card rounded-2xl p-8 h-full border-glow">
+            <div class="w-12 h-12 rounded-xl bg-electric/10 flex items-center justify-center mb-5">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-electric" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h2 class="text-2xl font-bold text-white mb-4">Visión</h2>
+            <p class="text-slate-400 leading-relaxed">
+              Consolidarnos como una empresa globalizada con una amplia participación en el mercado internacional, participando en proyectos en México, Guatemala, Honduras, El Salvador y República Dominicana.
+            </p>
+          </div>
+        </AnimatedSection>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Valores -->
+  <section class="py-20">
+    <Container>
+      <AnimatedSection class="text-center max-w-3xl mx-auto mb-12">
+        <p class="text-electric font-semibold text-sm uppercase tracking-widest mb-3">Nuestra cultura</p>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Nuestros Valores</h2>
+        <p class="text-slate-400">Principios que guían cada proyecto que emprendemos.</p>
+      </AnimatedSection>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {values.map((value, index) => (
+          <AnimatedSection delay={index * 80}>
+            <div class="glass-card rounded-xl p-6 border-glow flex items-start gap-4">
+              <span class="text-2xl">{value.icon}</span>
+              <div>
+                <h3 class="text-lg font-bold text-white mb-1">{value.title}</h3>
+                <p class="text-slate-400 text-sm">{value.desc}</p>
+              </div>
+            </div>
+          </AnimatedSection>
+        ))}
+      </div>
+    </Container>
+  </section>
+
+  <!-- Obras Recientes -->
+  <section class="py-20 bg-slate-900/30">
+    <Container>
+      <AnimatedSection class="text-center max-w-3xl mx-auto mb-12">
+        <p class="text-electric font-semibold text-sm uppercase tracking-widest mb-3">Experiencia reciente</p>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Obras Recientes</h2>
+        <p class="text-slate-400">Proyectos entregados para los principales grupos retail y cinematográficos de México.</p>
+      </AnimatedSection>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <AnimatedSection>
+          <div class="glass-card rounded-2xl p-6 h-full border-glow">
+            <h3 class="text-lg font-semibold text-electric uppercase tracking-wide mb-4">2025</h3>
+            <ul class="space-y-3">
+              {recentWorks2025.map((work) => (
+                <li class="flex items-start gap-3 text-slate-300">
+                  <span class="w-1.5 h-1.5 rounded-full bg-electric mt-2 flex-shrink-0"></span>
+                  <span class="text-sm">{work}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </AnimatedSection>
+
+        <AnimatedSection delay={150}>
+          <div class="glass-card rounded-2xl p-6 h-full border-glow">
+            <h3 class="text-lg font-semibold text-electric uppercase tracking-wide mb-4">2024</h3>
+            <ul class="space-y-3">
+              {recentWorks2024.map((work) => (
+                <li class="flex items-start gap-3 text-slate-300">
+                  <span class="w-1.5 h-1.5 rounded-full bg-electric mt-2 flex-shrink-0"></span>
+                  <span class="text-sm">{work}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </AnimatedSection>
       </div>
 
-      <!-- Misión y Visión -->
-      <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:border-gray-300 transition-all">
-        <div class="mb-6">
-          <h3 class="text-xl font-semibold mb-2 text-gray-700">Misión</h3>
-          <p class="text-gray-600">Alcanzar la certificación en la fabricación y elaboración de todos nuestros productos y servicios.</p>
-        </div>
-        <div>
-          <h3 class="text-xl font-semibold mb-2 text-gray-700">Visión</h3>
-          <p class="text-gray-600">Consolidarnos como una empresa globalizada con una amplia participación en el mercado internacional.</p>
-        </div>
-      </div>
-
-      <!-- Valores -->
-      <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:border-gray-300 transition-all">
-        <h2 class="text-2xl font-bold mb-4 text-gray-700">Nuestros Valores</h2>
-        <ul class="space-y-3">
-          <li class="flex items-start gap-3">
-            <span class="bg-gray-100 p-1 rounded-full">🔍</span>
-            <span><strong class="text-gray-700">Verdad:</strong> Base de operación y toma de decisiones.</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="bg-gray-100 p-1 rounded-full">🔄</span>
-            <span><strong class="text-gray-700">Versatilidad:</strong> Adaptación al cambio constante.</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="bg-gray-100 p-1 rounded-full">🤝</span>
-            <span><strong class="text-gray-700">Respeto:</strong> Colaboración con las partes interesadas.</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="bg-gray-100 p-1 rounded-full">👥</span>
-            <span><strong class="text-gray-700">Unidad:</strong> Trabajo en equipo con un mismo objetivo.</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="bg-gray-100 p-1 rounded-full">🛠️</span>
-            <span><strong class="text-gray-700">Servicio:</strong> Respaldo continuo a nuestros clientes.</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Obras Recientes -->
-      <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:border-gray-300 transition-all md:col-span-2 lg:col-span-2">
-        <h2 class="text-2xl font-bold mb-4 text-gray-700">Obras Recientes</h2>
-        <a href="/CV_INTECSA.pdf" target="_blank" download class="mb-4 inline-flex items-center px-4 py-2 bg-slate-700 text-white rounded-lg hover:bg-slate-800 transition-colors text-sm font-medium">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <AnimatedSection delay={300} class="text-center mt-10">
+        <a href="/CV_INTECSA.pdf" target="_blank" download class="btn-secondary">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
           </svg>
-          Descargar resumen de obras (PDF)
+          Descargar resumen completo de obras
         </a>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div class="bg-gray-50 p-3 rounded-lg border border-gray-100">
-            <h3 class="text-sm font-semibold text-blue-600 uppercase tracking-wide mb-2">2025</h3>
-            <ul class="space-y-1 text-sm text-gray-700">
-              <li>El Palacio de Hierro Monterrey — Alimentadores generales</li>
-              <li>Moda Joven Sfera México — Sfera Saltillo, Cd. Juárez y Colima</li>
-              <li>Distribuidora Liverpool — Control de acceso Galerías Coapa y comedor Querétaro</li>
-              <li>Operadora de Cinemas — Contactos Cinemex Delta CDMX</li>
-            </ul>
-          </div>
-          <div class="bg-gray-50 p-3 rounded-lg border border-gray-100">
-            <h3 class="text-sm font-semibold text-blue-600 uppercase tracking-wide mb-2">2024</h3>
-            <ul class="space-y-1 text-sm text-gray-700">
-              <li>Liverpool Gourmet Polanco CDMX</li>
-              <li>ITX Retail México — Pull & Bear y Bershka Parque Delta</li>
-              <li>ITX Retail México — Pull & Bear Oasis Coyoacán</li>
-              <li>ITX Retail México — Stradivarius Satélite y Galerías Monterrey</li>
-              <li>Cinemex Insurgentes / Cinemex Samara Satélite</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      </AnimatedSection>
+    </Container>
+  </section>
 
-      <!-- Carta del Director -->
-      <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:border-gray-300 transition-all md:col-span-2">
-        <h2 class="text-2xl font-bold mb-4 text-gray-700">Carta del Director</h2>
-        <blockquote class="text-gray-600 italic border-l-4 border-gray-300 pl-4 py-2">
-          "Grupo INTECSA busca adoptar la norma ISO 9001-2015 para garantizar eficiencia, eficacia y mejora continua en todos los procesos, con un enfoque basado en riesgos y oportunidades."
-        </blockquote>
-        <div class="mt-4 flex items-center gap-3">
-          <div class="h-12 w-12 bg-gray-100 rounded-full flex items-center justify-center">
-            <span class="text-xl text-gray-500">👔</span>
-          </div>
-          <div>
-            <p class="font-medium text-gray-700">Director General</p>
-            <p class="text-sm text-gray-500">Grupo INTECSA</p>
+  <!-- Carta del Director -->
+  <section class="py-20">
+    <Container>
+      <AnimatedSection>
+        <div class="glass-card rounded-3xl p-8 md:p-12 border-glow relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-64 h-64 bg-electric/5 rounded-full blur-3xl"></div>
+          <div class="relative z-10 max-w-4xl">
+            <div class="w-16 h-16 rounded-full bg-gradient-to-br from-electric/20 to-electric/5 flex items-center justify-center mb-6">
+              <span class="text-3xl">👔</span>
+            </div>
+            <blockquote class="text-xl md:text-2xl text-slate-200 italic leading-relaxed mb-8 border-l-4 border-electric pl-6">
+              "Instalaciones y Técnica busca adoptar la norma internacional ISO 9001-2015 para garantizar eficiencia, eficacia y mejora continua en todos los procesos, con un enfoque basado en riesgos y oportunidades."
+            </blockquote>
+            <div class="flex items-center gap-4">
+              <div class="h-12 w-12 rounded-full bg-slate-700 flex items-center justify-center">
+                <span class="text-xl">👤</span>
+              </div>
+              <div>
+                <p class="font-semibold text-white">Director General</p>
+                <p class="text-sm text-slate-400">Instalaciones y Técnica S.A. de C.V.</p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
+      </AnimatedSection>
+    </Container>
+  </section>
 </div>
