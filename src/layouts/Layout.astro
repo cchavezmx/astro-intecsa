@@ -6,7 +6,7 @@ interface Props {
   title?: string;
 }
 
-const { title = "Instalaciones y Técnica" } = Astro.props;
+const { title = "Grupo Intecsa" } = Astro.props;
 ---
 
 <!doctype html>
@@ -18,117 +18,59 @@ const { title = "Instalaciones y Técnica" } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <meta
       name="description"
-      content="Instalaciones y Técnica S.A. de C.V. — Empresa mexicana con más de 27 años de experiencia en integraciones ABB, instalaciones eléctricas industriales y comerciales. Obras realizadas para Liverpool, Palacio de Hierro, Grupo Inditex y CFE en México."
+      content="Grupo Intecsa — Instalaciones y Técnica S.A. de C.V. Empresa mexicana con más de 27 años de experiencia en integraciones ABB, instalaciones eléctricas industriales y comerciales. Obras realizadas para Liverpool, Palacio de Hierro, Grupo Inditex y CFE en México."
     />
     <title>{title}</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500&family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
   </head>
-  <body class="bg-light text-intecsa-gray-dark antialiased">
+  <body class="bg-white text-gray-900 antialiased">
     <!-- Navbar -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between h-16 md:h-20">
-          <a href="/" class="flex items-center gap-3 group">
-            <img
-              src="https://blog-omega-mauve.vercel.app/_next/image?url=%2Flogo%2Fweb-logo.webp&w=96&q=75"
-              alt="Logo Instalaciones y Técnica"
-              class="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
-            />
-            <span class="text-lg sm:text-xl font-bold tracking-tight text-intecsa-gray-dark">
-              Instalaciones <span class="text-corporate">y Técnica</span>
-            </span>
-          </a>
+    <nav class="sticky top-0 z-50 bg-white/[0.86] backdrop-blur-md border-b border-[#e8eaee]">
+      <div class="max-w-[1200px] mx-auto px-6 h-[74px] flex items-center justify-between gap-6">
+        <a href="/" class="flex items-center gap-3 text-inherit">
+          <img
+            src="https://blog-omega-mauve.vercel.app/_next/image?url=%2Flogo%2Fweb-logo.webp&w=96&q=75"
+            alt="Logo Grupo Intecsa"
+            class="h-10 w-auto object-contain block"
+          />
+          <span class="text-[17px] font-extrabold tracking-[0.06em] text-gray-900 uppercase">
+            Grupo <span class="text-brand-600">Intecsa</span>
+          </span>
+        </a>
 
-          <div class="hidden md:flex items-center gap-8">
-            <a href="/" class="text-sm font-medium text-intecsa-slate hover:text-corporate transition-colors relative group">
-              Inicio
-              <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-corporate transition-all duration-300 group-hover:w-full"></span>
-            </a>
-            <a href="/about" class="text-sm font-medium text-intecsa-slate hover:text-corporate transition-colors relative group">
-              Nosotros
-              <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-corporate transition-all duration-300 group-hover:w-full"></span>
-            </a>
-            <a href="/products" class="text-sm font-medium text-intecsa-slate hover:text-corporate transition-colors relative group">
-              Catálogos
-              <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-corporate transition-all duration-300 group-hover:w-full"></span>
-            </a>
-            <a
-              href="https://forms.monday.com/forms/embed/608067760034e1ac1f86e10392668e8b?r=use1"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn-corporate text-sm"
-            >
-              Contacto
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-              </svg>
-            </a>
-          </div>
-
-          <div class="md:hidden">
-            <button
-              type="button"
-              class="text-intecsa-gray-dark hover:text-corporate p-2"
-              id="menu-button"
-              aria-label="Abrir menú"
-              aria-expanded="false"
-            >
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Mobile menu -->
-      <div id="mobile-menu" class="hidden md:hidden border-t border-gray-100 bg-white">
-        <div class="px-4 py-4 space-y-2">
-          <a href="/" class="block px-3 py-2 rounded-lg text-base font-medium text-intecsa-slate hover:text-corporate hover:bg-corporate/5 transition-colors">Inicio</a>
-          <a href="/about" class="block px-3 py-2 rounded-lg text-base font-medium text-intecsa-slate hover:text-corporate hover:bg-corporate/5 transition-colors">Nosotros</a>
-          <a href="/products" class="block px-3 py-2 rounded-lg text-base font-medium text-intecsa-slate hover:text-corporate hover:bg-corporate/5 transition-colors">Catálogos</a>
+        <div class="flex items-center gap-7">
           <a
             href="https://forms.monday.com/forms/embed/608067760034e1ac1f86e10392668e8b?r=use1"
             target="_blank"
             rel="noopener noreferrer"
-            class="block px-3 py-2 rounded-lg text-base font-medium text-corporate hover:bg-corporate/5 transition-colors"
+            class="btn-brand"
           >
             Contacto
+            <img src="/icons/contacto.svg" alt="" class="h-4 w-4 brightness-0 invert" />
           </a>
         </div>
       </div>
     </nav>
 
-    <main class="pt-16 md:pt-20">
+    <main>
       <slot />
     </main>
 
     <Footer />
 
-    <script>
-      const menuButton = document.getElementById('menu-button');
-      const mobileMenu = document.getElementById('mobile-menu');
-
-      menuButton?.addEventListener('click', () => {
-        const isHidden = mobileMenu?.classList.contains('hidden');
-        mobileMenu?.classList.toggle('hidden', !isHidden);
-        menuButton.setAttribute('aria-expanded', String(isHidden));
-      });
-    </script>
-
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Organization",
-        "name": "Instalaciones y Técnica, S.A. de C.V.",
+        "name": "Grupo Intecsa — Instalaciones y Técnica, S.A. de C.V.",
         "url": "https://itamx.com",
-        "alternateName": "Grupo INTECSA, Instalaciones y Técnica S.A. de C.V.",
+        "alternateName": "Instalaciones y Técnica S.A. de C.V.",
         "logo": "https://blog-omega-mauve.vercel.app/_next/image?url=%2Flogo%2Fweb-logo.webp&w=96&q=75",
         "description": "Partner oficial de ABB, integraciones eléctricas para Liverpool, Palacio de Hierro, Grupo Inditex y CFE en México.",
         "sameAs": [
