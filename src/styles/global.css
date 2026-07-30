@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  /* Colores institucionales Grupo Intecsa (compatibilidad) */
+  /* Colores institucionales Instalaciones y Técnica (compatibilidad) */
   --color-intecsa-blue: #0066cc;
   --color-intecsa-blue-dark: #004d99;
   --color-intecsa-blue-light: #1a85ff;
@@ -12,7 +12,7 @@
   --color-intecsa-gray-light: #f8f9fa;
   --color-intecsa-slate: #495057;
 
-  /* Paleta del diseño Grupo Intecsa Home */
+  /* Paleta del diseño Instalaciones y Técnica Home */
   --color-brand-50: #eff6ff;
   --color-brand-100: #dbeafe;
   --color-brand-200: #bfdbfe;

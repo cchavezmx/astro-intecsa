@@ -6,7 +6,7 @@ interface Props {
   title?: string;
 }
 
-const { title = "Grupo Intecsa" } = Astro.props;
+const { title = "Instalaciones y Técnica" } = Astro.props;
 ---
 
 <!doctype html>
@@ -18,14 +18,14 @@ const { title = "Grupo Intecsa" } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <meta
       name="description"
-      content="Grupo Intecsa — Instalaciones y Técnica S.A. de C.V. Empresa mexicana con más de 27 años de experiencia en integraciones ABB, instalaciones eléctricas industriales y comerciales. Obras realizadas para Liverpool, Palacio de Hierro, Grupo Inditex y CFE en México."
+      content="Instalaciones y Técnica S.A. de C.V. — Empresa mexicana con más de 27 años de experiencia en integraciones ABB, instalaciones eléctricas industriales y comerciales. Obras realizadas para Liverpool, Palacio de Hierro, Grupo Inditex y CFE en México."
     />
     <title>{title}</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500&family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -35,16 +35,15 @@ const { title = "Grupo Intecsa" } = Astro.props;
       <div class="max-w-[1200px] mx-auto px-6 h-[74px] flex items-center justify-between gap-6">
         <a href="/" class="flex items-center gap-3 text-inherit">
           <img
-            src="https://blog-omega-mauve.vercel.app/_next/image?url=%2Flogo%2Fweb-logo.webp&w=96&q=75"
-            alt="Logo Grupo Intecsa"
-            class="h-10 w-auto object-contain block"
+            src="/ite_logo.jpeg"
+            alt="Instalaciones y Técnica"
+            class="h-11 w-auto object-contain block"
           />
-          <span class="text-[17px] font-extrabold tracking-[0.06em] text-gray-900 uppercase">
-            Grupo <span class="text-brand-600">Intecsa</span>
-          </span>
         </a>
 
         <div class="flex items-center gap-7">
+          <a href="/about" class="hidden sm:flex text-sm font-semibold text-gray-700 hover:text-brand-600 transition-colors">Nosotros</a>
+          <a href="/products" class="hidden sm:flex text-sm font-semibold text-gray-700 hover:text-brand-600 transition-colors">Catálogos</a>
           <a
             href="https://forms.monday.com/forms/embed/608067760034e1ac1f86e10392668e8b?r=use1"
             target="_blank"
@@ -68,10 +67,10 @@ const { title = "Grupo Intecsa" } = Astro.props;
       {
         "@context": "https://schema.org",
         "@type": "Organization",
-        "name": "Grupo Intecsa — Instalaciones y Técnica, S.A. de C.V.",
+        "name": "Instalaciones y Técnica, S.A. de C.V.",
         "url": "https://itamx.com",
-        "alternateName": "Instalaciones y Técnica S.A. de C.V.",
-        "logo": "https://blog-omega-mauve.vercel.app/_next/image?url=%2Flogo%2Fweb-logo.webp&w=96&q=75",
+        "alternateName": "INTECSA",
+        "logo": "https://itamx.com/ite_logo.jpeg",
         "description": "Partner oficial de ABB, integraciones eléctricas para Liverpool, Palacio de Hierro, Grupo Inditex y CFE en México.",
         "sameAs": [
           "https://www.linkedin.com/company/grupo-intecsa/",
