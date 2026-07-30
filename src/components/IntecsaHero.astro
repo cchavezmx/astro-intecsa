@@ -33,47 +33,47 @@ const recentWorks2024 = [
 ];
 ---
 
-<div class="bg-slate-950 min-h-screen">
+<div class="bg-light min-h-screen">
   <!-- Hero interno -->
-  <section class="relative py-24 md:py-32 overflow-hidden">
-    <div class="absolute inset-0 gradient-radial"></div>
+  <section class="relative py-24 md:py-32 overflow-hidden gradient-corporate">
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-corporate/20 to-corporate/90"></div>
     <Container class="relative z-10">
       <div class="grid lg:grid-cols-2 gap-12 items-center">
         <AnimatedSection>
-          <p class="text-electric font-semibold text-sm uppercase tracking-widest mb-4">Sobre nosotros</p>
+          <p class="text-intecsa-orange-light font-bold text-sm uppercase tracking-widest mb-4">Sobre nosotros</p>
           <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white mb-6">
-            Bienvenido a <span class="text-transparent bg-clip-text bg-gradient-to-r from-electric to-cyan-300">Instalaciones y Técnica</span>
+            Bienvenido a <span class="text-intecsa-orange-light">Instalaciones y Técnica</span>
           </h1>
-          <p class="text-lg md:text-xl text-slate-300 leading-relaxed mb-8">
+          <p class="text-lg md:text-xl text-white/90 leading-relaxed mb-8">
             Empresa mexicana con más de 27 años de experiencia en la instalación, planeación, construcción y mantenimiento de centros comerciales, tiendas departamentales, naves industriales y edificios inteligentes.
           </p>
           <div class="flex flex-col sm:flex-row gap-4">
-            <a href="/CV_INTECSA.pdf" target="_blank" download class="btn-primary">
+            <a href="/CV_INTECSA.pdf" target="_blank" download class="btn-corporate bg-white text-corporate hover:bg-gray-100">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
               </svg>
               Descargar CV de obras
             </a>
-            <a href="/" class="btn-secondary">
+            <a href="/" class="btn-outline border-white text-white hover:bg-white hover:text-corporate">
               Volver al inicio
             </a>
           </div>
         </AnimatedSection>
 
         <AnimatedSection delay={200}>
-          <div class="glass-card rounded-3xl p-8">
+          <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
             <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-2">
-              <span class="text-amber">🏆</span> Reconocimientos
+              <span class="text-intecsa-orange-light">🏆</span> Reconocimientos
             </h2>
             <div class="space-y-5">
               {recognitions.map((rec) => (
                 <div class="flex gap-4 items-start">
-                  <div class="flex-shrink-0 w-16 h-16 rounded-2xl bg-gradient-to-br from-amber/20 to-amber/5 flex items-center justify-center">
-                    <span class="text-lg font-bold text-amber font-mono">{rec.year}</span>
+                  <div class="flex-shrink-0 w-16 h-16 rounded-2xl bg-white/15 flex items-center justify-center border border-white/20">
+                    <span class="text-lg font-bold text-intecsa-orange-light font-mono">{rec.year}</span>
                   </div>
                   <div>
                     <h3 class="text-white font-semibold">{rec.title}</h3>
-                    <p class="text-slate-400 text-sm">{rec.desc}</p>
+                    <p class="text-white/70 text-sm">{rec.desc}</p>
                   </div>
                 </div>
               ))}
@@ -85,47 +85,47 @@ const recentWorks2024 = [
   </section>
 
   <!-- Quiénes somos / Misión / Visión -->
-  <section class="py-20 relative">
-    <div class="absolute inset-0 bg-gradient-to-b from-slate-900/50 to-slate-950"></div>
+  <section class="py-20 relative bg-soft">
+    <div class="absolute inset-0 gradient-radial-corporate"></div>
     <Container class="relative z-10">
       <div class="grid md:grid-cols-3 gap-6">
         <AnimatedSection>
-          <div class="glass-card rounded-2xl p-8 h-full border-glow">
-            <div class="w-12 h-12 rounded-xl bg-electric/10 flex items-center justify-center mb-5">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-electric" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <div class="card-corporate p-8 h-full">
+            <div class="w-12 h-12 rounded-xl bg-corporate/10 flex items-center justify-center mb-5">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-corporate" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
               </svg>
             </div>
-            <h2 class="text-2xl font-bold text-white mb-4">¿Quiénes somos?</h2>
-            <p class="text-slate-400 leading-relaxed">
+            <h2 class="text-2xl font-bold text-intecsa-gray-dark mb-4">¿Quiénes somos?</h2>
+            <p class="text-intecsa-slate leading-relaxed">
               INTECSA es una empresa dedicada a la instalación, planeación, construcción y mantenimiento de centros comerciales, tiendas departamentales, naves industriales y edificios inteligentes. Contamos con el equipo humano y tecnológico para ofrecer atención directa, respuesta inmediata y conocimiento integral de cada proyecto.
             </p>
           </div>
         </AnimatedSection>
 
         <AnimatedSection delay={100}>
-          <div class="glass-card rounded-2xl p-8 h-full border-glow">
-            <div class="w-12 h-12 rounded-xl bg-electric/10 flex items-center justify-center mb-5">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-electric" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <div class="card-corporate p-8 h-full">
+            <div class="w-12 h-12 rounded-xl bg-corporate/10 flex items-center justify-center mb-5">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-corporate" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
               </svg>
             </div>
-            <h2 class="text-2xl font-bold text-white mb-4">Misión</h2>
-            <p class="text-slate-400 leading-relaxed">
+            <h2 class="text-2xl font-bold text-intecsa-gray-dark mb-4">Misión</h2>
+            <p class="text-intecsa-slate leading-relaxed">
               Alcanzar la certificación en la fabricación y elaboración de todos nuestros productos y servicios, cumpliendo con los estándares de calidad ANCE y normas internacionales.
             </p>
           </div>
         </AnimatedSection>
 
         <AnimatedSection delay={200}>
-          <div class="glass-card rounded-2xl p-8 h-full border-glow">
-            <div class="w-12 h-12 rounded-xl bg-electric/10 flex items-center justify-center mb-5">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-electric" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <div class="card-corporate p-8 h-full">
+            <div class="w-12 h-12 rounded-xl bg-corporate/10 flex items-center justify-center mb-5">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-corporate" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
-            <h2 class="text-2xl font-bold text-white mb-4">Visión</h2>
-            <p class="text-slate-400 leading-relaxed">
+            <h2 class="text-2xl font-bold text-intecsa-gray-dark mb-4">Visión</h2>
+            <p class="text-intecsa-slate leading-relaxed">
               Consolidarnos como una empresa globalizada con una amplia participación en el mercado internacional, participando en proyectos en México, Guatemala, Honduras, El Salvador y República Dominicana.
             </p>
           </div>
@@ -135,22 +135,23 @@ const recentWorks2024 = [
   </section>
 
   <!-- Valores -->
-  <section class="py-20">
+  <section class="py-20 bg-light">
     <Container>
       <AnimatedSection class="text-center max-w-3xl mx-auto mb-12">
-        <p class="text-electric font-semibold text-sm uppercase tracking-widest mb-3">Nuestra cultura</p>
-        <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Nuestros Valores</h2>
-        <p class="text-slate-400">Principios que guían cada proyecto que emprendemos.</p>
+        <p class="text-corporate font-bold text-sm uppercase tracking-widest mb-3">Nuestra cultura</p>
+        <div class="corporate-line mx-auto mb-5"></div>
+        <h2 class="text-3xl sm:text-4xl font-bold text-intecsa-gray-dark mb-4">Nuestros Valores</h2>
+        <p class="text-intecsa-slate">Principios que guían cada proyecto que emprendemos.</p>
       </AnimatedSection>
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {values.map((value, index) => (
           <AnimatedSection delay={index * 80}>
-            <div class="glass-card rounded-xl p-6 border-glow flex items-start gap-4">
+            <div class="card-corporate p-6 flex items-start gap-4">
               <span class="text-2xl">{value.icon}</span>
               <div>
-                <h3 class="text-lg font-bold text-white mb-1">{value.title}</h3>
-                <p class="text-slate-400 text-sm">{value.desc}</p>
+                <h3 class="text-lg font-bold text-intecsa-gray-dark mb-1">{value.title}</h3>
+                <p class="text-intecsa-slate text-sm">{value.desc}</p>
               </div>
             </div>
           </AnimatedSection>
@@ -160,22 +161,23 @@ const recentWorks2024 = [
   </section>
 
   <!-- Obras Recientes -->
-  <section class="py-20 bg-slate-900/30">
+  <section class="py-20 bg-soft">
     <Container>
       <AnimatedSection class="text-center max-w-3xl mx-auto mb-12">
-        <p class="text-electric font-semibold text-sm uppercase tracking-widest mb-3">Experiencia reciente</p>
-        <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Obras Recientes</h2>
-        <p class="text-slate-400">Proyectos entregados para los principales grupos retail y cinematográficos de México.</p>
+        <p class="text-corporate font-bold text-sm uppercase tracking-widest mb-3">Experiencia reciente</p>
+        <div class="corporate-line mx-auto mb-5"></div>
+        <h2 class="text-3xl sm:text-4xl font-bold text-intecsa-gray-dark mb-4">Obras Recientes</h2>
+        <p class="text-intecsa-slate">Proyectos entregados para los principales grupos retail y cinematográficos de México.</p>
       </AnimatedSection>
 
       <div class="grid md:grid-cols-2 gap-6">
         <AnimatedSection>
-          <div class="glass-card rounded-2xl p-6 h-full border-glow">
-            <h3 class="text-lg font-semibold text-electric uppercase tracking-wide mb-4">2025</h3>
+          <div class="card-corporate p-6 h-full">
+            <h3 class="text-lg font-semibold text-corporate uppercase tracking-wide mb-4">2025</h3>
             <ul class="space-y-3">
               {recentWorks2025.map((work) => (
-                <li class="flex items-start gap-3 text-slate-300">
-                  <span class="w-1.5 h-1.5 rounded-full bg-electric mt-2 flex-shrink-0"></span>
+                <li class="flex items-start gap-3 text-intecsa-slate">
+                  <span class="w-1.5 h-1.5 rounded-full bg-corporate mt-2 flex-shrink-0"></span>
                   <span class="text-sm">{work}</span>
                 </li>
               ))}
@@ -184,12 +186,12 @@ const recentWorks2024 = [
         </AnimatedSection>
 
         <AnimatedSection delay={150}>
-          <div class="glass-card rounded-2xl p-6 h-full border-glow">
-            <h3 class="text-lg font-semibold text-electric uppercase tracking-wide mb-4">2024</h3>
+          <div class="card-corporate p-6 h-full">
+            <h3 class="text-lg font-semibold text-corporate uppercase tracking-wide mb-4">2024</h3>
             <ul class="space-y-3">
               {recentWorks2024.map((work) => (
-                <li class="flex items-start gap-3 text-slate-300">
-                  <span class="w-1.5 h-1.5 rounded-full bg-electric mt-2 flex-shrink-0"></span>
+                <li class="flex items-start gap-3 text-intecsa-slate">
+                  <span class="w-1.5 h-1.5 rounded-full bg-corporate mt-2 flex-shrink-0"></span>
                   <span class="text-sm">{work}</span>
                 </li>
               ))}
@@ -199,7 +201,7 @@ const recentWorks2024 = [
       </div>
 
       <AnimatedSection delay={300} class="text-center mt-10">
-        <a href="/CV_INTECSA.pdf" target="_blank" download class="btn-secondary">
+        <a href="/CV_INTECSA.pdf" target="_blank" download class="btn-outline">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
           </svg>
@@ -210,25 +212,25 @@ const recentWorks2024 = [
   </section>
 
   <!-- Carta del Director -->
-  <section class="py-20">
+  <section class="py-20 bg-light">
     <Container>
       <AnimatedSection>
-        <div class="glass-card rounded-3xl p-8 md:p-12 border-glow relative overflow-hidden">
-          <div class="absolute top-0 right-0 w-64 h-64 bg-electric/5 rounded-full blur-3xl"></div>
+        <div class="card-corporate p-8 md:p-12 relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-64 h-64 bg-corporate/5 rounded-full blur-3xl"></div>
           <div class="relative z-10 max-w-4xl">
-            <div class="w-16 h-16 rounded-full bg-gradient-to-br from-electric/20 to-electric/5 flex items-center justify-center mb-6">
+            <div class="w-16 h-16 rounded-full bg-corporate/10 flex items-center justify-center mb-6">
               <span class="text-3xl">👔</span>
             </div>
-            <blockquote class="text-xl md:text-2xl text-slate-200 italic leading-relaxed mb-8 border-l-4 border-electric pl-6">
+            <blockquote class="text-xl md:text-2xl text-intecsa-slate italic leading-relaxed mb-8 border-l-4 border-corporate pl-6">
               "Instalaciones y Técnica busca adoptar la norma internacional ISO 9001-2015 para garantizar eficiencia, eficacia y mejora continua en todos los procesos, con un enfoque basado en riesgos y oportunidades."
             </blockquote>
             <div class="flex items-center gap-4">
-              <div class="h-12 w-12 rounded-full bg-slate-700 flex items-center justify-center">
+              <div class="h-12 w-12 rounded-full bg-corporate/10 flex items-center justify-center">
                 <span class="text-xl">👤</span>
               </div>
               <div>
-                <p class="font-semibold text-white">Director General</p>
-                <p class="text-sm text-slate-400">Instalaciones y Técnica S.A. de C.V.</p>
+                <p class="font-semibold text-intecsa-gray-dark">Director General</p>
+                <p class="text-sm text-intecsa-slate">Instalaciones y Técnica S.A. de C.V.</p>
               </div>
             </div>
           </div>

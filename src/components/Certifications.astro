@@ -46,13 +46,13 @@ const certs_images = [
   </div>
 
   <div class="cert-modal hidden fixed inset-0 z-[100]">
-    <div class="fixed inset-0 bg-slate-950/95 backdrop-blur-sm" data-modal-backdrop></div>
+    <div class="fixed inset-0 bg-intecsa-gray-dark/90 backdrop-blur-sm" data-modal-backdrop></div>
 
     <div class="relative z-10 flex items-center justify-center min-h-screen p-4">
-      <div class="bg-slate-900 rounded-2xl w-full max-w-6xl mx-auto border border-white/10 shadow-2xl overflow-hidden">
+      <div class="bg-white rounded-2xl w-full max-w-6xl mx-auto border border-intecsa-gray-light shadow-2xl overflow-hidden">
         <button
           type="button"
-          class="cert-close absolute top-4 right-4 z-20 bg-slate-800/80 hover:bg-slate-700 text-white p-2 rounded-full transition-colors"
+          class="cert-close absolute top-4 right-4 z-20 bg-intecsa-gray-dark/80 hover:bg-corporate text-white p-2 rounded-full transition-colors"
           aria-label="Cerrar galería"
         >
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -61,7 +61,7 @@ const certs_images = [
         </button>
 
         <div class="flex flex-col lg:flex-row">
-          <div class="w-full lg:w-3/4 bg-black/50">
+          <div class="w-full lg:w-3/4 bg-intecsa-gray-light">
             <div class="relative pt-[75%] lg:pt-[56.25%]">
               <img
                 data-cert-image
@@ -72,13 +72,13 @@ const certs_images = [
             </div>
           </div>
 
-          <div class="w-full lg:w-1/4 p-6 bg-slate-800/50 flex flex-col justify-between">
+          <div class="w-full lg:w-1/4 p-6 bg-soft flex flex-col justify-between">
             <div>
-              <h2 class="text-2xl font-bold text-white mb-2">Certificaciones</h2>
-              <p class="text-slate-400 text-sm mb-6">
+              <h2 class="text-2xl font-bold text-intecsa-gray-dark mb-2">Certificaciones</h2>
+              <p class="text-intecsa-slate text-sm mb-6">
                 Galería de certificados y reconocimientos obtenidos a lo largo de nuestra trayectoria.
               </p>
-              <div class="text-sm text-slate-500 mb-4">
+              <div class="text-sm text-intecsa-gray mb-4">
                 <span data-cert-counter>1</span> / {certs_images.length}
               </div>
             </div>
@@ -86,13 +86,13 @@ const certs_images = [
             <div class="flex gap-2 justify-between mt-auto">
               <button
                 type="button"
-                class="cert-prev flex-1 bg-slate-700 hover:bg-slate-600 text-white px-4 py-2.5 rounded-lg transition-colors text-sm font-medium"
+                class="cert-prev flex-1 bg-intecsa-gray-light hover:bg-corporate hover:text-white text-intecsa-slate px-4 py-2.5 rounded-lg transition-colors text-sm font-medium border border-intecsa-gray-light"
               >
                 Anterior
               </button>
               <button
                 type="button"
-                class="cert-next flex-1 bg-electric hover:bg-electric-dark text-slate-950 px-4 py-2.5 rounded-lg transition-colors text-sm font-medium font-semibold"
+                class="cert-next flex-1 bg-corporate hover:bg-intecsa-blue-dark text-white px-4 py-2.5 rounded-lg transition-colors text-sm font-semibold"
               >
                 Siguiente
               </button>

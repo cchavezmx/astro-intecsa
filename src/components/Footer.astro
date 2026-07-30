@@ -15,7 +15,7 @@ const legalLinks = [
 ];
 ---
 
-<footer class="bg-slate-950 border-t border-white/10">
+<footer class="bg-intecsa-gray-dark border-t border-white/10">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
       <!-- Logo y descripción -->
@@ -26,11 +26,11 @@ const legalLinks = [
             alt="Logo Instalaciones y Técnica"
             class="h-10 w-auto object-contain"
           />
-          <span class="text-xl font-bold tracking-tight">
-            Instalaciones <span class="text-electric">y Técnica</span>
+          <span class="text-xl font-bold tracking-tight text-white">
+            Instalaciones <span class="text-intecsa-orange">y Técnica</span>
           </span>
         </a>
-        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+        <p class="text-gray-300 text-sm leading-relaxed mb-6">
           Especialistas en instalación, planeación, construcción y mantenimiento de centros comerciales, naves industriales y edificios inteligentes.
         </p>
         <div class="flex space-x-4">
@@ -38,7 +38,7 @@ const legalLinks = [
             href="https://www.linkedin.com/company/grupo-intecsa/"
             target="_blank"
             rel="noopener noreferrer"
-            class="w-10 h-10 rounded-full bg-slate-900 border border-white/10 flex items-center justify-center text-slate-400 hover:text-electric hover:border-electric/30 transition-colors"
+            class="w-10 h-10 rounded-full bg-white/10 border border-white/10 flex items-center justify-center text-gray-300 hover:text-white hover:bg-corporate hover:border-corporate/30 transition-colors"
             aria-label="LinkedIn"
           >
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -49,7 +49,7 @@ const legalLinks = [
             href="https://www.facebook.com/people/Grupo-Intecsa-Mx-Oficial"
             target="_blank"
             rel="noopener noreferrer"
-            class="w-10 h-10 rounded-full bg-slate-900 border border-white/10 flex items-center justify-center text-slate-400 hover:text-electric hover:border-electric/30 transition-colors"
+            class="w-10 h-10 rounded-full bg-white/10 border border-white/10 flex items-center justify-center text-gray-300 hover:text-white hover:bg-corporate hover:border-corporate/30 transition-colors"
             aria-label="Facebook"
           >
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -65,7 +65,7 @@ const legalLinks = [
         <ul class="space-y-3">
           {quickLinks.map((link) => (
             <li>
-              <a href={link.href} class="text-slate-400 hover:text-electric transition-colors text-sm">{link.label}</a>
+              <a href={link.href} class="text-gray-300 hover:text-intecsa-orange transition-colors text-sm">{link.label}</a>
             </li>
           ))}
         </ul>
@@ -74,10 +74,10 @@ const legalLinks = [
       <!-- Contacto -->
       <div>
         <h3 class="text-white font-semibold mb-5">Contacto</h3>
-        <address class="not-italic space-y-3 text-sm text-slate-400">
+        <address class="not-italic space-y-3 text-sm text-gray-300">
           <p>Raúl Zárate Machuca Cuevítas #11<br />01220 Ciudad de México, CDMX</p>
           <p>
-            <a href="mailto:contacto@grupointecsa.com" class="hover:text-electric transition-colors">contacto@grupointecsa.com</a>
+            <a href="mailto:contacto@grupointecsa.com" class="hover:text-intecsa-orange transition-colors">contacto@grupointecsa.com</a>
           </p>
           <p>Lunes a Viernes: 9:00 - 18:00</p>
         </address>
@@ -103,12 +103,12 @@ const legalLinks = [
 
     <div class="border-t border-white/10 pt-8">
       <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-        <p class="text-sm text-slate-500">
+        <p class="text-sm text-gray-400">
           © {currentYear} Instalaciones y Técnica S.A. de C.V. Todos los derechos reservados.
         </p>
         <div class="flex flex-wrap justify-center gap-x-6 gap-y-2">
           {legalLinks.map((link) => (
-            <a href={link.href} class="text-sm text-slate-500 hover:text-electric transition-colors">{link.label}</a>
+            <a href={link.href} class="text-sm text-gray-400 hover:text-intecsa-orange transition-colors">{link.label}</a>
           ))}
         </div>
       </div>

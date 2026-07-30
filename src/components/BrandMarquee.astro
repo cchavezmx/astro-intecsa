@@ -15,21 +15,21 @@ const brands = [
 ];
 ---
 
-<section class="py-10 border-y border-white/10 bg-slate-900/50 overflow-hidden">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6">
-    <p class="text-center text-sm font-medium text-slate-400 uppercase tracking-widest">
+<section class="py-10 border-y border-gray-200 bg-white overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-5">
+    <p class="text-center text-sm font-bold text-intecsa-gray uppercase tracking-widest">
       Confían en nosotros
     </p>
   </div>
 
   <div class="relative">
-    <div class="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-slate-950 to-transparent z-10"></div>
-    <div class="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-slate-950 to-transparent z-10"></div>
+    <div class="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-white to-transparent z-10"></div>
+    <div class="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-white to-transparent z-10"></div>
 
     <div class="flex animate-marquee whitespace-nowrap">
       {
         [...brands, ...brands].map((brand) => (
-          <div class="inline-flex items-center mx-8 px-6 py-3 rounded-full glass-card text-slate-300 font-semibold text-sm hover:text-electric hover:border-electric/30 transition-colors">
+          <div class="inline-flex items-center mx-6 px-6 py-3 rounded-full bg-gray-50 border border-gray-200 text-intecsa-slate font-bold text-sm hover:bg-corporate hover:text-white hover:border-corporate transition-all duration-300">
             {brand}
           </div>
         ))

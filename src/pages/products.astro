@@ -65,17 +65,17 @@ const products = [
 ---
 
 <Layout title="Catálogos y Documentos | Instalaciones y Técnica">
-  <div class="bg-slate-950 min-h-screen pb-20">
+  <div class="bg-light min-h-screen pb-20">
     <!-- Hero interno -->
-    <section class="relative py-20 md:py-28 overflow-hidden">
-      <div class="absolute inset-0 gradient-radial"></div>
+    <section class="relative py-20 md:py-28 overflow-hidden gradient-corporate">
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-corporate/20 to-corporate/90"></div>
       <Container class="relative z-10">
         <AnimatedSection class="text-center max-w-3xl mx-auto">
-          <p class="text-electric font-semibold text-sm uppercase tracking-widest mb-4">Recursos</p>
+          <p class="text-intecsa-orange-light font-semibold text-sm uppercase tracking-widest mb-4">Recursos</p>
           <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white mb-6">
-            Catálogos y <span class="text-transparent bg-clip-text bg-gradient-to-r from-electric to-cyan-300">documentos</span>
+            Catálogos y <span class="text-intecsa-orange-light">documentos</span>
           </h1>
-          <p class="text-lg text-slate-300">
+          <p class="text-lg text-white/90">
             Descarga documentos oficiales, certificaciones y consulta nuestros productos y servicios.
           </p>
         </AnimatedSection>
@@ -83,25 +83,25 @@ const products = [
     </section>
 
     <!-- Documentos -->
-    <section class="py-12">
+    <section class="py-12 bg-soft">
       <Container>
         <div class="grid md:grid-cols-3 gap-6">
           {catalogs.map((catalog, index) => (
             <AnimatedSection delay={index * 100}>
-              <div class="glass-card rounded-2xl p-8 h-full border-glow flex flex-col">
-                <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-electric/20 to-electric/5 flex items-center justify-center mb-6">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-electric" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div class="card-corporate rounded-2xl p-8 h-full flex flex-col">
+                <div class="w-14 h-14 rounded-2xl bg-corporate/10 flex items-center justify-center mb-6">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-corporate" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d={catalog.icon} />
                   </svg>
                 </div>
-                <h2 class="text-xl font-bold text-white mb-3">{catalog.title}</h2>
-                <p class="text-slate-400 text-sm leading-relaxed mb-6 flex-grow">{catalog.description}</p>
+                <h2 class="text-xl font-bold text-intecsa-gray-dark mb-3">{catalog.title}</h2>
+                <p class="text-intecsa-slate text-sm leading-relaxed mb-6 flex-grow">{catalog.description}</p>
                 <a
                   href={catalog.href}
                   target="_blank"
                   rel={catalog.download ? undefined : 'noopener noreferrer'}
                   download={catalog.download ? '' : undefined}
-                  class="btn-secondary w-full justify-center"
+                  class="btn-outline w-full justify-center"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
@@ -116,12 +116,13 @@ const products = [
     </section>
 
     <!-- Productos -->
-    <section class="py-20">
+    <section class="py-20 bg-light">
       <Container>
         <AnimatedSection class="text-center max-w-3xl mx-auto mb-12">
-          <p class="text-electric font-semibold text-sm uppercase tracking-widest mb-3">Líneas de negocio</p>
-          <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Nuestros productos</h2>
-          <p class="text-slate-400">
+          <p class="text-corporate font-semibold text-sm uppercase tracking-widest mb-3">Líneas de negocio</p>
+          <div class="corporate-line mx-auto mb-5"></div>
+          <h2 class="text-3xl sm:text-4xl font-bold text-intecsa-gray-dark mb-4">Nuestros productos</h2>
+          <p class="text-intecsa-slate">
             Soluciones eléctricas diseñadas y fabricadas bajo los más altos estándares de calidad.
           </p>
         </AnimatedSection>
@@ -129,10 +130,12 @@ const products = [
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {products.map((product, index) => (
             <AnimatedSection delay={index * 80}>
-              <div class="glass-card rounded-2xl p-6 h-full border-glow">
-                <span class="text-3xl mb-4 block">{product.icon}</span>
-                <h3 class="text-xl font-bold text-white mb-3">{product.title}</h3>
-                <p class="text-slate-400 text-sm leading-relaxed">{product.description}</p>
+              <div class="card-corporate rounded-2xl p-6 h-full">
+                <div class="w-12 h-12 rounded-xl bg-corporate/10 flex items-center justify-center mb-4">
+                  <span class="text-2xl">{product.icon}</span>
+                </div>
+                <h3 class="text-xl font-bold text-intecsa-gray-dark mb-3">{product.title}</h3>
+                <p class="text-intecsa-slate text-sm leading-relaxed">{product.description}</p>
               </div>
             </AnimatedSection>
           ))}
@@ -141,21 +144,21 @@ const products = [
     </section>
 
     <!-- CTA -->
-    <section class="py-12 px-4">
+    <section class="py-12 px-4 bg-soft">
       <Container>
         <AnimatedSection>
-          <div class="glass-card rounded-3xl p-8 md:p-12 text-center border-glow">
-            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">
+          <div class="card-corporate rounded-3xl p-8 md:p-12 text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-intecsa-gray-dark mb-4">
               ¿Necesitas una cotización personalizada?
             </h2>
-            <p class="text-slate-400 mb-8 max-w-2xl mx-auto">
+            <p class="text-intecsa-slate mb-8 max-w-2xl mx-auto">
               Cuéntanos sobre tu proyecto y nuestro equipo te contactará para una propuesta a la medida.
             </p>
             <a
               href="https://forms.monday.com/forms/embed/608067760034e1ac1f86e10392668e8b?r=use1"
               target="_blank"
               rel="noopener noreferrer"
-              class="btn-primary"
+              class="btn-corporate"
             >
               Solicitar cotización
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

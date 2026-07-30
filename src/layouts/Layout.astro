@@ -29,9 +29,9 @@ const { title = "Instalaciones y Técnica" } = Astro.props;
       rel="stylesheet"
     />
   </head>
-  <body class="bg-dark text-slate-100 antialiased">
+  <body class="bg-light text-intecsa-gray-dark antialiased">
     <!-- Navbar -->
-    <nav class="fixed top-0 left-0 right-0 z-50 glass">
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16 md:h-20">
           <a href="/" class="flex items-center gap-3 group">
@@ -40,29 +40,29 @@ const { title = "Instalaciones y Técnica" } = Astro.props;
               alt="Logo Instalaciones y Técnica"
               class="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
             />
-            <span class="text-lg sm:text-xl font-bold tracking-tight">
-              Instalaciones <span class="text-electric">y Técnica</span>
+            <span class="text-lg sm:text-xl font-bold tracking-tight text-intecsa-gray-dark">
+              Instalaciones <span class="text-corporate">y Técnica</span>
             </span>
           </a>
 
           <div class="hidden md:flex items-center gap-8">
-            <a href="/" class="text-sm font-medium text-slate-300 hover:text-white transition-colors relative group">
+            <a href="/" class="text-sm font-medium text-intecsa-slate hover:text-corporate transition-colors relative group">
               Inicio
-              <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-electric transition-all duration-300 group-hover:w-full"></span>
+              <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-corporate transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href="/about" class="text-sm font-medium text-slate-300 hover:text-white transition-colors relative group">
+            <a href="/about" class="text-sm font-medium text-intecsa-slate hover:text-corporate transition-colors relative group">
               Nosotros
-              <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-electric transition-all duration-300 group-hover:w-full"></span>
+              <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-corporate transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href="/products" class="text-sm font-medium text-slate-300 hover:text-white transition-colors relative group">
+            <a href="/products" class="text-sm font-medium text-intecsa-slate hover:text-corporate transition-colors relative group">
               Catálogos
-              <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-electric transition-all duration-300 group-hover:w-full"></span>
+              <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-corporate transition-all duration-300 group-hover:w-full"></span>
             </a>
             <a
               href="https://forms.monday.com/forms/embed/608067760034e1ac1f86e10392668e8b?r=use1"
               target="_blank"
               rel="noopener noreferrer"
-              class="btn-primary text-sm"
+              class="btn-corporate text-sm"
             >
               Contacto
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -74,7 +74,7 @@ const { title = "Instalaciones y Técnica" } = Astro.props;
           <div class="md:hidden">
             <button
               type="button"
-              class="text-slate-200 hover:text-white p-2"
+              class="text-intecsa-gray-dark hover:text-corporate p-2"
               id="menu-button"
               aria-label="Abrir menú"
               aria-expanded="false"
@@ -88,16 +88,16 @@ const { title = "Instalaciones y Técnica" } = Astro.props;
       </div>
 
       <!-- Mobile menu -->
-      <div id="mobile-menu" class="hidden md:hidden border-t border-white/10 bg-slate-900/95 backdrop-blur-xl">
-        <div class="px-4 py-4 space-y-3">
-          <a href="/" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-300 hover:text-white hover:bg-white/5 transition-colors">Inicio</a>
-          <a href="/about" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-300 hover:text-white hover:bg-white/5 transition-colors">Nosotros</a>
-          <a href="/products" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-300 hover:text-white hover:bg-white/5 transition-colors">Catálogos</a>
+      <div id="mobile-menu" class="hidden md:hidden border-t border-gray-100 bg-white">
+        <div class="px-4 py-4 space-y-2">
+          <a href="/" class="block px-3 py-2 rounded-lg text-base font-medium text-intecsa-slate hover:text-corporate hover:bg-corporate/5 transition-colors">Inicio</a>
+          <a href="/about" class="block px-3 py-2 rounded-lg text-base font-medium text-intecsa-slate hover:text-corporate hover:bg-corporate/5 transition-colors">Nosotros</a>
+          <a href="/products" class="block px-3 py-2 rounded-lg text-base font-medium text-intecsa-slate hover:text-corporate hover:bg-corporate/5 transition-colors">Catálogos</a>
           <a
             href="https://forms.monday.com/forms/embed/608067760034e1ac1f86e10392668e8b?r=use1"
             target="_blank"
             rel="noopener noreferrer"
-            class="block px-3 py-2 rounded-lg text-base font-medium text-electric hover:bg-electric/10 transition-colors"
+            class="block px-3 py-2 rounded-lg text-base font-medium text-corporate hover:bg-corporate/5 transition-colors"
           >
             Contacto
           </a>
