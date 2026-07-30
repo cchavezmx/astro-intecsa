@@ -1,32 +1,56 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Container from "../components/Container.astro";
+import AnimatedSection from "../components/AnimatedSection.astro";
 ---
 
-<Layout>
-  <main class="max-w-3xl mx-auto px-4 py-16">
-    <h1 class="text-3xl font-bold text-gray-900 mb-6">Aviso Legal</h1>
-    <div class="prose prose-lg text-gray-700">
-      <p>
-        De conformidad con la legislación vigente, se informa que este sitio web es propiedad de Grupo Intecsa, S.A. de C.V., con domicilio en Raúl Zárate Machuca Cuevítas #11, 01220 Ciudad de México, CDMX, México.
-      </p>
-      <h2 class="text-xl font-semibold mt-8 mb-3">1. Datos de contacto</h2>
-      <p>
-        Correo electrónico: <a href="mailto:contacto@grupointecsa.com" class="text-blue-600 hover:underline">contacto@grupointecsa.com</a><br />
-        Horario de atención: Lunes a viernes, 9:00 a 18:00 horas.
-      </p>
-      <h2 class="text-xl font-semibold mt-8 mb-3">2. Objeto del sitio</h2>
-      <p>
-        Este sitio tiene como finalidad dar a conocer los servicios, productos, certificaciones y datos de contacto de Grupo Intecsa. La información publicada es meramente informativa.
-      </p>
-      <h2 class="text-xl font-semibold mt-8 mb-3">3. Contenido y responsabilidad</h2>
-      <p>
-        Grupo Intecsa realiza esfuerzos razonables para mantener la información actualizada y exacta, pero no garantiza la ausencia de errores u omisiones. La empresa se reserva el derecho de modificar el contenido del sitio en cualquier momento.
-      </p>
-      <h2 class="text-xl font-semibold mt-8 mb-3">4. Ley aplicable</h2>
-      <p>
-        Cualquier controversia derivada del uso de este sitio se regirá por las leyes de los Estados Unidos Mexicanos y será competencia de los tribunales de la Ciudad de México.
-      </p>
-      <p class="mt-8 text-sm text-gray-500">Última actualización: julio 2026.</p>
-    </div>
-  </main>
+<Layout title="Aviso Legal | Instalaciones y Técnica">
+  <div class="bg-light min-h-screen pb-20">
+    <section class="relative py-16 md:py-24 overflow-hidden gradient-corporate">
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-corporate/20 to-corporate/90"></div>
+      <Container class="relative z-10">
+        <AnimatedSection class="text-center max-w-3xl mx-auto">
+          <p class="text-intecsa-orange-light font-semibold text-sm uppercase tracking-widest mb-4">Legal</p>
+          <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-6">
+            Aviso Legal
+          </h1>
+        </AnimatedSection>
+      </Container>
+    </section>
+
+    <Container>
+      <AnimatedSection>
+        <div class="card-corporate rounded-2xl p-6 md:p-10 max-w-4xl mx-auto -mt-8">
+          <div class="space-y-8 text-intecsa-slate leading-relaxed">
+            <p>
+              De conformidad con la legislación vigente, se informa que este sitio web es propiedad de <strong class="text-intecsa-gray-dark">Instalaciones y Técnica, S.A. de C.V.</strong>, con domicilio en Raúl Zárate Machuca Cuevítas #11, 01220 Ciudad de México, CDMX, México.
+            </p>
+
+            <div>
+              <h2 class="text-xl font-bold text-intecsa-gray-dark mb-3">1. Datos de contacto</h2>
+              <p>Correo electrónico: <a href="mailto:contacto@grupointecsa.com" class="text-corporate hover:underline">contacto@grupointecsa.com</a></p>
+              <p>Horario de atención: Lunes a viernes, 9:00 a 18:00 horas.</p>
+            </div>
+
+            <div>
+              <h2 class="text-xl font-bold text-intecsa-gray-dark mb-3">2. Objeto del sitio</h2>
+              <p>Este sitio tiene como finalidad dar a conocer los servicios, productos, certificaciones y datos de contacto de Instalaciones y Técnica. La información publicada es meramente informativa.</p>
+            </div>
+
+            <div>
+              <h2 class="text-xl font-bold text-intecsa-gray-dark mb-3">3. Contenido y responsabilidad</h2>
+              <p>Instalaciones y Técnica realiza esfuerzos razonables para mantener la información actualizada y exacta, pero no garantiza la ausencia de errores u omisiones. La empresa se reserva el derecho de modificar el contenido del sitio en cualquier momento.</p>
+            </div>
+
+            <div>
+              <h2 class="text-xl font-bold text-intecsa-gray-dark mb-3">4. Ley aplicable</h2>
+              <p>Cualquier controversia derivada del uso de este sitio se regirá por las leyes de los Estados Unidos Mexicanos y será competencia de los tribunales de la Ciudad de México.</p>
+            </div>
+
+            <p class="text-sm text-intecsa-gray pt-4 border-t border-intecsa-gray-light">Última actualización: julio 2026.</p>
+          </div>
+        </div>
+      </AnimatedSection>
+    </Container>
+  </div>
 </Layout>

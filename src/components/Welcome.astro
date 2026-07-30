@@ -1,130 +1,160 @@
 ---
-import astroLogo from '../assets/astro.svg';
-import background from '../assets/background.svg';
 import CertsGallery from '../components/Certifications.astro';
+
+const projects = [
+  {
+    image: '/assets/santa_anita_liverpool.webp',
+    date: '2021-07-08',
+    title: 'Guadalajara, Liverpool',
+    description: 'Se trata de un proyecto de iluminación y control de energía eléctrica en el centro comercial Liverpool.',
+  },
+  {
+    image: '/assets/liverpool_gourmet.webp',
+    date: '2020-03-16',
+    title: 'Liverpool Gourmet Polanco CDMX, 2024',
+    description: 'Se trata de un tablero inteligente que permite la gestión de la energía eléctrica de manera eficiente y segura.',
+  },
+];
 ---
 
-<div id="container" class="bg-gray-800">
-  <div class="bg-gray-100 font-sans">
-    <section class="h-80 px-4 bg-blue-600 text-white py-20 animate-banner-zoom banner-intecsa" >
-      <div class="container mx-auto px-4 sm:px-6 text-center md:text-left">
-        <h1 class="text-3xl sm:text-4xl font-bold mb-4">Bienvenido a Instalaciones y Técnica</h1>
-        <p class="text-base sm:text-lg w-full sm:w-3/4 lg:w-1/2">Somos una empresa dedicada a la fabricación, comercialización y montaje de instalaciones eléctricas en industrias, comercios y edificios.</p>
+<div class="bg-white">
+  <!-- Hero -->
+  <section class="relative overflow-hidden bg-navy-950 min-h-[560px] flex items-center">
+    <div class="absolute inset-0 bg-cover bg-center animate-banner-zoom" style="background-image: url('/assets/hero_ita_min.jpg')"></div>
+    <div class="absolute inset-0" style="background: linear-gradient(100deg, rgba(6,14,26,0.9) 0%, rgba(6,14,26,0.72) 45%, rgba(6,14,26,0.25) 100%)"></div>
+    <div class="relative max-w-[1200px] mx-auto px-6 py-26 w-full">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="brand-line"></span>
+        <span class="label-mono text-brand-300">Instalaciones y Técnica</span>
       </div>
-    </section>
+      <h1 class="m-0 mb-5 max-w-[15ch] text-5xl md:text-6xl lg:text-[64px] leading-[1.02] tracking-[-0.035em] font-extrabold text-white [text-wrap:balance]">
+        Bienvenido a Instalaciones y Técnica
+      </h1>
+      <p class="m-0 max-w-[56ch] text-lg leading-relaxed text-white/[0.82] [text-wrap:pretty]">
+        Somos una empresa dedicada a la fabricación, comercialización y montaje de instalaciones eléctricas en industrias, comercios y edificios.
+      </p>
+    </div>
+  </section>
 
-    <!-- Modales -->
-    <!-- Hero Certificado ABB -->
-    <section class="relative py-20 px-6 overflow-hidden bg-gradient-to-br from-[#0ea5e9] via-[#6366f1] to-[#ec4899]">
-      <!-- Animación de fondo -->
-      <div
-        class="absolute inset-0 bg-[length:400%_400%] animate-gradient pointer-events-none opacity-30"
-        style="background-image: linear-gradient(45deg, #0ea5e9, #6366f1, #ec4899, #0ea5e9);"
-      ></div>
-
-      <div class="relative z-10 max-w-4xl mx-auto text-center bg-white/10 backdrop-blur-md p-10 rounded-2xl shadow-xl ring-1 ring-white/20">
-        <h2 class="text-4xl font-bold mb-6 text-white drop-shadow">
+  <!-- Certificación ABB -->
+  <section class="relative overflow-hidden bg-[#0f1c2e] border-t border-brand-400/[0.18]">
+    <div class="absolute top-[-30%] right-[-10%] w-[60%] h-[160%] pointer-events-none" style="background: radial-gradient(circle at center, rgba(37,99,235,0.28) 0%, rgba(37,99,235,0) 65%)"></div>
+    <div class="relative max-w-[1200px] mx-auto px-6 py-24 grid lg:grid-cols-[1.05fr_0.95fr] gap-16 items-center">
+      <div>
+        <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 border border-brand-300/[0.32] rounded-full mb-7">
+          <span class="w-1.5 h-1.5 rounded-full bg-brand-400 block"></span>
+          <span class="label-mono text-brand-200">ABB · PanelBuilder</span>
+        </div>
+        <h2 class="m-0 mb-6 text-4xl md:text-[44px] leading-[1.08] tracking-[-0.03em] font-extrabold text-white">
           Certificado Oficial
         </h2>
-        <p class="mb-8 text-white text-lg">
-          ABB certifica a <strong>Grupo INTECSA</strong> como <strong>PanelBuilder oficial</strong>, reconociendo su profesionalismo, calidad técnica y cumplimiento en soluciones de distribución eléctrica en baja tensión, a partir del <strong>17 de julio de 2025</strong>.
+        <p class="m-0 mb-8 max-w-[54ch] text-lg leading-relaxed text-slate-300/[0.8] [text-wrap:pretty]">
+          ABB certifica a <strong class="text-white font-bold">Instalaciones y Técnica</strong> como <strong class="text-white font-bold">PanelBuilder oficial</strong>, reconociendo su profesionalismo, calidad técnica y cumplimiento en soluciones de distribución eléctrica en baja tensión, a partir del <strong class="text-white font-bold">17 de julio de 2025</strong>.
         </p>
-
-        <a href="/certificado_abb_2025.pdf" target="_blank" class="inline-block group">
-          <img
-            src="/certificado_abb_2025_preview.jpg"
-            alt="Certificado ABB 2025"
-            class="w-full max-w-md mx-auto rounded-lg shadow-xl transform transition duration-500 group-hover:scale-105 group-hover:shadow-2xl"
-          />
-          <p class="mt-4 text-white font-semibold group-hover:underline">Ver PDF completo</p>
+        <a href="/certificado_abb_2025.pdf" target="_blank" class="btn-white">
+          Ver PDF completo
+          <span class="text-[17px] leading-none">→</span>
         </a>
       </div>
-    </section>
-    <!-- Productos Destacados -->
-    <section class="container mx-auto px-4 sm:px-6 py-12">
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <CertsGallery>
-          <div id="gellery-cert" class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 h-60">
-            <div >
-              <h3 class="text-xl sm:text-2xl font-bold mb-4 flex justify-between">
-                Certificaciones
-                <img src="/icons/certificated.svg" alt="Certificaciones" class="h-6 w-16">
-              </h3>
-            </div>
-            <p class="text-gray-700 text-sm sm:text-base">Contamos con certificaciones de calidad otorgadas por ABB, ANCE <strong>por nuestro cumplimiento y excelencia en instalaciones eléctricas.</strong></p>
-          </div>
-        </CertsGallery>
-        <a href="/about" >
-          <div id="curriculum-btn" class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 h-60">
-            <h3 class="text-xl sm:text-2xl font-bold mb-4 flex justify-between">
-              Curriculum
-              <img src="/icons/curriculum.svg" alt="Certificaciones" class="h-6 w-16">
-            </h3>
-            <p class="text-gray-700 text-sm sm:text-base">Explorá nuestra trayectoria y experiencia en obras para clientes como <strong>CFE, Inditex, Cinemex y muchos más.</strong></p>
-          </div>
-        </a>
-        <a href="/products">
-        <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 h-60">
-          <h3 class="text-xl sm:text-2xl font-bold mb-4 flex justify-between">
-            Nuestros Catálogos
-            <img src="/icons/package.svg" alt="Certificaciones" class="h-6 w-16">
-          </h3>
-          <p class="text-gray-700 text-sm sm:text-base">Descarga nuestros catálogos o revisa nuestros productos en una versión en línea.</p>
-          </div>
-        </a>
-      </div>
-    </section>
+      <a href="/certificado_abb_2025.pdf" target="_blank" class="block rounded-2xl overflow-hidden border border-slate-400/[0.28] bg-white/[0.04] p-3.5 shadow-[0_24px_60px_-24px_rgba(0,0,0,0.7)]">
+        <img src="/certificado_abb_2025_preview.jpg" alt="Certificado ABB 2025" class="block w-full rounded-lg" />
+      </a>
+    </div>
+  </section>
 
-    <!-- Descripción de Servicios -->
-    <section class="bg-gray-50 py-12">
-      <div class="container mx-auto px-4 sm:px-6">
-        <h2 class="text-2xl sm:text-3xl font-bold text-center mb-8">Nuestros Servicios</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <h3 class="text-xl sm:text-2xl font-bold mb-4 flex justify-between">
-              Partner Oficial ABB
-              <img src="https://campaign.abb.com/l/501021/2019-08-06/q7pxgj/501021/182073/ABB_Logo.png" alt="ABB" class="h-6 ml-3 w-16">
-            </h3>
-            <p class="text-gray-700 text-sm sm:text-base">Somos integradores certificados por ABB en soluciones eléctricas industriales, automatización y sistemas de distribución. Ofrecemos tecnología de vanguardia con respaldo internacional.</p>
+  <!-- Tarjetas de acceso -->
+  <section class="max-w-[1200px] mx-auto px-6 pt-22 pb-2">
+    <div class="grid md:grid-cols-3 gap-5">
+      <CertsGallery>
+        <div class="card-design flex flex-col gap-4 p-7 cursor-pointer h-full">
+          <div class="flex items-start justify-between gap-4">
+            <h3 class="m-0 text-[22px] tracking-[-0.02em] font-bold text-gray-900">Certificaciones</h3>
+            <img src="/icons/certificated.svg" alt="" class="h-[26px] w-auto opacity-85" />
           </div>
-          <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <h3 class="text-xl sm:text-2xl font-bold mb-4 flex justify-between">
-              Canalización y Soportería
-              <img src="icons/logito_cana.webp" alt="Canalización" class="h-15 w-15 ml-3 object-fill">
-            </h3>
-            <p class="text-gray-700 text-sm sm:text-base">Diseñamos y ejecutamos canalizaciones eléctricas en media y baja tensión, así como instalación de soportería metálica conforme a norma. Soluciones seguras y eficientes para todo tipo de proyectos.</p>
+          <p class="m-0 text-[15px] leading-relaxed text-gray-600 [text-wrap:pretty]">
+            Contamos con certificaciones de calidad otorgadas por ABB, ANCE <strong class="text-gray-900 font-bold">por nuestro cumplimiento y excelencia en instalaciones eléctricas.</strong>
+          </p>
+          <span class="mt-auto pt-2.5 label-mono text-brand-600">Ver galería →</span>
+        </div>
+      </CertsGallery>
+
+      <a href="/about" class="card-design flex flex-col gap-4 p-7 text-inherit h-full">
+        <div class="flex items-start justify-between gap-4">
+          <h3 class="m-0 text-[22px] tracking-[-0.02em] font-bold text-gray-900">Curriculum</h3>
+          <img src="/icons/curriculum.svg" alt="" class="h-[26px] w-auto opacity-85" />
+        </div>
+        <p class="m-0 text-[15px] leading-relaxed text-gray-600 [text-wrap:pretty]">
+          Explorá nuestra trayectoria y experiencia en obras para clientes como <strong class="text-gray-900 font-bold">CFE, Inditex, Cinemex y muchos más.</strong>
+        </p>
+        <span class="mt-auto pt-2.5 label-mono text-brand-600">Nosotros →</span>
+      </a>
+
+      <a href="/products" class="card-design flex flex-col gap-4 p-7 text-inherit h-full">
+        <div class="flex items-start justify-between gap-4">
+          <h3 class="m-0 text-[22px] tracking-[-0.02em] font-bold text-gray-900">Nuestros Catálogos</h3>
+          <img src="/icons/package.svg" alt="" class="h-[26px] w-auto opacity-85" />
+        </div>
+        <p class="m-0 text-[15px] leading-relaxed text-gray-600 [text-wrap:pretty]">
+          Descarga nuestros catálogos o revisa nuestros productos en una versión en línea.
+        </p>
+        <span class="mt-auto pt-2.5 label-mono text-brand-600">Catálogos →</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Servicios -->
+  <section class="py-22">
+    <div class="max-w-[1200px] mx-auto px-6">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="brand-line bg-brand-600"></span>
+        <span class="label-mono text-brand-600">Servicios</span>
+      </div>
+      <h2 class="m-0 mb-10 text-3xl md:text-[40px] leading-[1.08] tracking-[-0.03em] font-extrabold text-gray-900">
+        Nuestros Servicios
+      </h2>
+      <div class="grid md:grid-cols-2 gap-5">
+        <div class="p-8 rounded-2xl bg-[#f5f7fa] border border-[#e8eaee] flex flex-col gap-4">
+          <div class="flex items-center justify-between gap-5">
+            <h3 class="m-0 text-2xl tracking-[-0.02em] font-bold text-gray-900">Partner Oficial ABB</h3>
+            <img src="https://campaign.abb.com/l/501021/2019-08-06/q7pxgj/501021/182073/ABB_Logo.png" alt="ABB" class="h-[22px] w-auto" />
           </div>
+          <p class="m-0 text-base leading-relaxed text-gray-600 [text-wrap:pretty]">
+            Somos integradores certificados por ABB en soluciones eléctricas industriales, automatización y sistemas de distribución. Ofrecemos tecnología de vanguardia con respaldo internacional.
+          </p>
+        </div>
+        <div class="p-8 rounded-2xl bg-[#f5f7fa] border border-[#e8eaee] flex flex-col gap-4">
+          <div class="flex items-center justify-between gap-5">
+            <h3 class="m-0 text-2xl tracking-[-0.02em] font-bold text-gray-900">Canalización y Soportería</h3>
+            <img src="/icons/logito_cana.webp" alt="Canalización" class="h-10 w-auto" />
+          </div>
+          <p class="m-0 text-base leading-relaxed text-gray-600 [text-wrap:pretty]">
+            Diseñamos y ejecutamos canalizaciones eléctricas en media y baja tensión, así como instalación de soportería metálica conforme a norma. Soluciones seguras y eficientes para todo tipo de proyectos.
+          </p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Blog -->
-    <section class="container mx-auto px-4 sm:px-6 py-12">
-      <h2 class="text-2xl sm:text-3xl font-bold text-center mb-8">Nuestro trabajo</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-          <img src="/assets/santa_anita_liverpool.webp" alt="Bienvenidos" class="w-full h-48 sm:h-56 object-cover rounded-t-lg">
-          <div class="p-6">
-            <h3 class="text-lg sm:text-xl font-bold mb-2">Guadalajara, Liverpool</h3>
-            <p class="text-gray-700 text-sm sm:text-base">
-              Se trata de un proyecto de iluminación y control de energía eléctrica en el centro comercial Liverpool.
-            </p>
-            <small class="text-gray-500 text-xs sm:text-sm">2021-07-08</small>
+  <!-- Proyectos -->
+  <section class="max-w-[1200px] mx-auto px-6 pb-24">
+    <div class="flex items-center gap-3 mb-4">
+      <span class="brand-line bg-brand-600"></span>
+      <span class="label-mono text-brand-600">Proyectos</span>
+    </div>
+    <h2 class="m-0 mb-10 text-3xl md:text-[40px] leading-[1.08] tracking-[-0.03em] font-extrabold text-gray-900">
+      Nuestro trabajo
+    </h2>
+    <div class="grid md:grid-cols-2 gap-5">
+      {projects.map((project) => (
+        <div class="card-project">
+          <img src={project.image} alt={project.title} class="block w-full h-[300px] object-cover" />
+          <div class="p-7 flex flex-col gap-3">
+            <span class="label-mono text-gray-400">{project.date}</span>
+            <h3 class="m-0 text-[22px] tracking-[-0.02em] font-bold text-gray-900">{project.title}</h3>
+            <p class="m-0 text-[15px] leading-relaxed text-gray-600 [text-wrap:pretty]">{project.description}</p>
           </div>
         </div>
-        <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-          <img src="/assets/liverpool_gourmet.webp" alt="Tableros Inteligentes" class="w-full h-48 sm:h-56 object-cover rounded-t-lg">
-          <div class="p-6">
-            <h3 class="text-lg sm:text-xl font-bold mb-2">Liverpool Gourmet Polanco CDMX, 2024</h3>
-            <p class="text-gray-700 text-sm sm:text-base">
-              Se trata de un tablero inteligente que permite la gestión de la energía eléctrica de manera eficiente y segura.
-            </p>
-            <small class="text-gray-500 text-xs sm:text-sm">2020-03-16</small>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </div>
+      ))}
+    </div>
+  </section>
 </div>
-

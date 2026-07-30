@@ -1,129 +1,299 @@
-<div id="gellery-cert" class="cursor-pointer">
-  <slot />
+---
+const certs_images = [
+  "foto_029310.webp",
+  "foto_047750.webp",
+  "foto_049490.webp",
+  "foto_087795.webp",
+  "foto_132900.webp",
+  "foto_160191.webp",
+  "foto_165181.webp",
+  "foto_195714.webp",
+  "foto_276618.webp",
+  "foto_310533.webp",
+  "foto_328897.webp",
+  "foto_374552.webp",
+  "foto_375562.webp",
+  "foto_445737.webp",
+  "foto_456455.webp",
+  "foto_465687.webp",
+  "foto_468111.webp",
+  "foto_472939.webp",
+  "foto_493603.webp",
+  "foto_517219.webp",
+  "foto_580050.webp",
+  "foto_605238.webp",
+  "foto_606979.webp",
+  "foto_612531.webp",
+  "foto_676879.webp",
+  "foto_705338.webp",
+  "foto_713344.webp",
+  "foto_741342.webp",
+  "foto_763482.webp",
+  "foto_765961.webp",
+  "foto_783795.webp",
+  "foto_803571.webp",
+  "foto_813475.webp",
+  "foto_834448.webp",
+  "foto_934135.webp",
+  "foto_962474.webp",
+  "foto_025399.webp",
+];
+---
+
+<div class="cert-gallery-wrapper" data-gallery="true">
+  <div class="cert-trigger">
+    <slot />
+  </div>
+
+  <div class="cert-modal hidden fixed inset-0 z-[100]">
+    <div class="fixed inset-0 bg-navy-950/96 backdrop-blur-sm" data-modal-backdrop></div>
+
+    <div class="relative z-10 flex items-center justify-center min-h-screen p-3 md:p-6">
+      <div class="bg-navy-900 rounded-2xl w-full max-w-[1200px] mx-auto border border-slate-400/15 shadow-2xl overflow-hidden flex flex-col lg:flex-row">
+        <button
+          type="button"
+          class="cert-close absolute top-3 right-3 md:top-4 md:right-4 z-30 bg-slate-800/90 hover:bg-brand-600 text-white p-2 rounded-full transition-colors shadow-lg"
+          aria-label="Cerrar galería"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+
+        <!-- Área de imagen -->
+        <div class="w-full lg:w-3/4 bg-[#05080f] relative flex items-center justify-center min-h-[50vh] lg:min-h-[78vh]">
+          <div data-cert-loader class="absolute inset-0 flex items-center justify-center z-10">
+            <div class="flex flex-col items-center gap-3 text-slate-400">
+              <div class="w-10 h-10 border-2 border-slate-600 border-t-brand-400 rounded-full animate-spin"></div>
+              <span class="label-mono">Cargando certificado...</span>
+            </div>
+          </div>
+
+          <img
+            data-cert-image
+            src={`certs/${certs_images[0]}`}
+            alt="Certificado seleccionado"
+            class="relative z-20 max-w-full max-h-[80vh] lg:max-h-[78vh] object-contain opacity-0 transition-opacity duration-300"
+            decoding="async"
+          />
+
+          <!-- Flechas flotantes en desktop -->
+          <button
+            type="button"
+            class="cert-prev hidden lg:flex absolute left-4 top-1/2 -translate-y-1/2 z-30 w-11 h-11 items-center justify-center rounded-full bg-slate-800/80 hover:bg-brand-600 text-white transition-colors shadow-lg"
+            aria-label="Certificado anterior"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <button
+            type="button"
+            class="cert-next hidden lg:flex absolute right-4 top-1/2 -translate-y-1/2 z-30 w-11 h-11 items-center justify-center rounded-full bg-slate-800/80 hover:bg-brand-600 text-white transition-colors shadow-lg"
+            aria-label="Siguiente certificado"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="w-full lg:w-1/4 p-5 md:p-6 bg-navy-900 flex flex-col justify-between">
+          <div>
+            <h2 class="text-2xl font-bold text-white mb-2">Certificaciones</h2>
+            <p class="text-slate-400 text-sm mb-6">
+              Galería de certificados y reconocimientos obtenidos a lo largo de nuestra trayectoria.
+            </p>
+            <div class="text-sm text-slate-500 mb-4">
+              <span data-cert-counter>1</span> / {certs_images.length}
+            </div>
+          </div>
+
+          <div class="flex gap-2 justify-between mt-auto">
+            <button
+              type="button"
+              class="cert-prev flex-1 bg-slate-800 hover:bg-slate-700 text-white px-4 py-2.5 rounded-lg transition-colors text-sm font-medium lg:hidden"
+            >
+              Anterior
+            </button>
+            <button
+              type="button"
+              class="cert-next flex-1 bg-brand-600 hover:bg-brand-700 text-white px-4 py-2.5 rounded-lg transition-colors text-sm font-semibold lg:hidden"
+            >
+              Siguiente
+            </button>
+          </div>
+
+          <!-- Miniaturas -->
+          <div class="hidden lg:grid grid-cols-6 gap-2 mt-6 max-h-[160px] overflow-y-auto pr-1" data-cert-thumbs>
+            {certs_images.map((filename, index) => (
+              <button
+                type="button"
+                data-thumb-index={index}
+                class="cert-thumb aspect-square rounded-md overflow-hidden border border-slate-600/40 hover:border-brand-400 transition-colors opacity-60 hover:opacity-100 focus:outline-none"
+                aria-label={`Ir al certificado ${index + 1}`}
+              >
+                <img src={`certs/${filename}`} alt="" class="w-full h-full object-cover" loading="lazy" decoding="async" />
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
-<div id="modal-cert" class="hidden"></div>
-
 <script>
-const certs_images = [
-  "foto_029310.png",
-  "foto_047750.png",
-  "foto_049490.png",
-  "foto_087795.png",
-  "foto_132900.png",
-  "foto_160191.png",
-  "foto_165181.png",
-  "foto_195714.png",
-  "foto_276618.png",
-  "foto_310533.png",
-  "foto_328897.png",
-  "foto_374552.png",
-  "foto_375562.png",
-  "foto_445737.png",
-  "foto_456455.png",
-  "foto_465687.png",
-  "foto_468111.png",
-  "foto_472939.png",
-  "foto_493603.png",
-  "foto_517219.png",
-  "foto_580050.png",
-  "foto_605238.png",
-  "foto_606979.png",
-  "foto_612531.png",
-  "foto_676879.png",
-  "foto_705338.png",
-  "foto_713344.png",
-  "foto_741342.png",
-  "foto_763482.png",
-  "foto_765961.png",
-  "foto_783795.png",
-  "foto_803571.png",
-  "foto_813475.png",
-  "foto_834448.png",
-  "foto_934135.png",
-  "foto_962474.png",
-  "foto_025399.png",
-];
+  (function () {
+    const wrappers = document.querySelectorAll('[data-gallery="true"]');
 
-function createGallery() {
-  const gallery = document.getElementById("gellery-cert");
-  gallery.addEventListener("click", () => {
-    const modal = document.getElementById("modal-cert");
-    modal.classList.toggle("hidden");
-    const contentModal = document.createElement("div");
-    contentModal.innerHTML = `
-          <div class="fixed flex justify-center items-center inset-0 bg-gray-800 bg-opacity-25 p-2 sm:p-4">
-            <div class="bg-white rounded-lg w-full max-w-5xl mx-auto">
-                <div class="relative">
-                    <!-- Botón de cerrar -->
-                    <button id="close-modal" class="absolute top-4 right-4 z-10 bg-white/80 p-2 rounded-full hover:bg-white transition-colors">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    </button>
-                    <div class="flex flex-col lg:flex-row">
-                        <!-- Contenedor de la imagen -->
-                        <div class="w-full lg:w-3/4">
-                            <div class="relative pt-[75%] lg:pt-[56.25%]">
-                                <img
-                                    id="image-selected"
-                                    src="certs/${certs_images[0]}" 
-                                    alt="Imagen seleccionada" 
-                                    class="absolute top-0 left-0 w-full h-full object-contain"
-                                >
-                            </div>
-                        </div>
-                         <div class="w-full lg:w-1/4 p-6 bg-gray-50 flex flex-col justify-between">
-                            <h2 class="text-2xl font-bold mb-4">Dluninc</h2>
-                            <p class="text-gray-600 mb-6">
-                                Another Test Caption. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                            </p>
-                            <div class="flex gap-2 justify-between mt-auto">
-                                <button id="before-image" class="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors">
-                                    Anterior
-                                </button>
-                                <button id="next-image" class="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-                                    Siguiente
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-          </div>`;
-    modal.appendChild(contentModal);
+    wrappers.forEach((wrapper) => {
+      const trigger = wrapper.querySelector('.cert-trigger');
+      const modal = wrapper.querySelector('.cert-modal');
+      const closeBtn = wrapper.querySelector('.cert-close');
+      const backdrop = wrapper.querySelector('[data-modal-backdrop]');
+      const nextBtns = wrapper.querySelectorAll('.cert-next');
+      const prevBtns = wrapper.querySelectorAll('.cert-prev');
+      const img = wrapper.querySelector('[data-cert-image]');
+      const counter = wrapper.querySelector('[data-cert-counter]');
+      const loader = wrapper.querySelector('[data-cert-loader]');
+      const thumbs = wrapper.querySelectorAll('.cert-thumb');
 
-    const closeModal = document.getElementById("close-modal");
-    closeModal.addEventListener("click", () => {
-      modal.classList.toggle("hidden");
-      contentModal.remove();
-    });
+      if (!trigger || !modal || !img) return;
 
-    const nextImage = document.getElementById("next-image");
-    let first = 0;
-    const last = certs_images.length - 1;
-    nextImage.addEventListener("click", () => {
-      if (first > last) {
-        first = 0;
+      const certs_images = [
+        "foto_029310.webp", "foto_047750.webp", "foto_049490.webp", "foto_087795.webp",
+        "foto_132900.webp", "foto_160191.webp", "foto_165181.webp", "foto_195714.webp",
+        "foto_276618.webp", "foto_310533.webp", "foto_328897.webp", "foto_374552.webp",
+        "foto_375562.webp", "foto_445737.webp", "foto_456455.webp", "foto_465687.webp",
+        "foto_468111.webp", "foto_472939.webp", "foto_493603.webp", "foto_517219.webp",
+        "foto_580050.webp", "foto_605238.webp", "foto_606979.webp", "foto_612531.webp",
+        "foto_676879.webp", "foto_705338.webp", "foto_713344.webp", "foto_741342.webp",
+        "foto_763482.webp", "foto_765961.webp", "foto_783795.webp", "foto_803571.webp",
+        "foto_813475.webp", "foto_834448.webp", "foto_934135.webp", "foto_962474.webp",
+        "foto_025399.webp",
+      ];
+
+      let current = 0;
+      const total = certs_images.length;
+      const cache = new Map();
+
+      function srcFor(index) {
+        return `certs/${certs_images[index]}`;
       }
-      const imgContent = document.getElementById("image-selected");
-      imgContent.src = `certs/${certs_images[first]}`;
-      first++;
-    });
 
-    const beforeImage = document.getElementById("before-image");
-    beforeImage.addEventListener("click", () => {
-      if (first < 0) {
-        first = last;
+      function preload(index) {
+        const safeIndex = ((index % total) + total) % total;
+        const s = srcFor(safeIndex);
+        if (cache.has(s)) return cache.get(s);
+        const pre = new Image();
+        pre.src = s;
+        cache.set(s, pre);
+        return pre;
       }
-      const imgContent = document.getElementById("image-selected");
-      imgContent.src = `certs/${certs_images[first]}`;
-      first--;
-    });
-  });
-}
 
-// Inicializar la galería cuando el DOM esté listo
-document.addEventListener('DOMContentLoaded', createGallery);
+      function updateThumbs() {
+        thumbs.forEach((thumb, i) => {
+          if (i === current) {
+            thumb.classList.add('border-brand-400', 'opacity-100');
+            thumb.classList.remove('border-slate-600/40', 'opacity-60');
+            thumb.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+          } else {
+            thumb.classList.remove('border-brand-400', 'opacity-100');
+            thumb.classList.add('border-slate-600/40', 'opacity-60');
+          }
+        });
+      }
+
+      function updateImage() {
+        const s = srcFor(current);
+        img.classList.add('opacity-0');
+        if (loader) loader.classList.remove('hidden');
+
+        const cached = cache.get(s);
+        const doUpdate = () => {
+          img.src = s;
+          img.classList.remove('opacity-0');
+          if (loader) loader.classList.add('hidden');
+          if (counter) counter.textContent = String(current + 1);
+          updateThumbs();
+          preload(current + 1);
+        };
+
+        if (cached && cached.complete) {
+          doUpdate();
+        } else {
+          const i = new Image();
+          i.src = s;
+          i.onload = doUpdate;
+          i.onerror = doUpdate;
+        }
+      }
+
+      function open() {
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        current = 0;
+        certs_images.forEach((_, i) => preload(i));
+        updateImage();
+      }
+
+      function close() {
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+
+      function next() {
+        current = (current + 1) % total;
+        updateImage();
+      }
+
+      function prev() {
+        current = (current - 1 + total) % total;
+        updateImage();
+      }
+
+      function goTo(index) {
+        current = ((index % total) + total) % total;
+        updateImage();
+      }
+
+      trigger.addEventListener('click', open);
+      closeBtn?.addEventListener('click', close);
+      backdrop?.addEventListener('click', close);
+
+      nextBtns.forEach((btn) => btn.addEventListener('click', (e) => { e.stopPropagation(); next(); }));
+      prevBtns.forEach((btn) => btn.addEventListener('click', (e) => { e.stopPropagation(); prev(); }));
+
+      thumbs.forEach((thumb) => {
+        thumb.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const idx = Number(thumb.getAttribute('data-thumb-index'));
+          if (!Number.isNaN(idx)) goTo(idx);
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (modal.classList.contains('hidden')) return;
+        if (e.key === 'Escape') close();
+        if (e.key === 'ArrowRight') next();
+        if (e.key === 'ArrowLeft') prev();
+      });
+
+      // Swipe en móvil
+      let touchStartX = 0;
+      let touchEndX = 0;
+      const touchZone = modal.querySelector('.bg-\\[\\#05080f\\]') || img;
+      touchZone?.addEventListener('touchstart', (e) => { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
+      touchZone?.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        const diff = touchStartX - touchEndX;
+        if (Math.abs(diff) > 50) {
+          if (diff > 0) next();
+          else prev();
+        }
+      }, { passive: true });
+    });
+  })();
 </script>
-
